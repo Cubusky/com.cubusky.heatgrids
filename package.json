@@ -1,25 +1,21 @@
 {
-  "name": "com.[company-name].[package-name]",
-  "version": "1.2.3",
-  "displayName": "Package Example",
-  "description": "This is an example package",
-  "unity": "2019.1",
-  "unityRelease": "0b5",
-  "documentationUrl": "https://example.com/",
-  "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
+  "name": "com.cubusky.heatgrids",
+  "version": "0.1.0-exp",
+  "displayName": "Cubusky Heatgrids",
+  "description": "A customizable heatmap solution able to record and display heatmap data. Heatgrids focuses on small and efficient file sizes in order to keep storage costs low. It does not store 3D positions, but cheap coordinates on an imaginary 3D grid.",
+  "unity": "2022.3",
   "dependencies": {
-    "com.[company-name].some-package": "1.0.0",
-    "com.[company-name].other-package": "2.0.0"
- },
- "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "com.cubusky.core": "https://github.com/Cubusky/com.cubusky.core.git"
+  },
+  "keywords": [
+    "Cubusky",
+    "Heat",
+    "Map",
+    "Grid"
   ],
   "author": {
-    "name": "Unity",
-    "email": "unity@example.com",
-    "url": "https://www.unity3d.com"
+    "name": "Cubusky",
+    "email": "cubuskycode@gmail.com",
+    "url": "https://github.com/Cubusky"
   }
 }
