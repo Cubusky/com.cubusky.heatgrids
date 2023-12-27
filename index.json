@@ -62,7 +62,7 @@
   "api/Cubusky.Heatgrids.JsonFileSaver.html": {
     "href": "api/Cubusky.Heatgrids.JsonFileSaver.html",
     "title": "Class JsonFileSaver | Cubusky Heatgrids | 0.1.0-exp",
-    "keywords": "Class JsonFileSaver Namespace Cubusky.Heatgrids [Serializable] public class JsonFileSaver : IHeatgridSaver Inheritance object JsonFileSaver Implements IHeatgridSaver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string filePath public string filePath { get; } Property Value string guid public Guid guid { get; set; } Property Value Guid"
+    "keywords": "Class JsonFileSaver Namespace Cubusky.Heatgrids [Serializable] public class JsonFileSaver : IHeatgridSaver Inheritance object JsonFileSaver Implements IHeatgridSaver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string directoryPath public string directoryPath { get; } Property Value string"
   },
   "api/Cubusky.Heatgrids.JsonHeatgrid.html": {
     "href": "api/Cubusky.Heatgrids.JsonHeatgrid.html",

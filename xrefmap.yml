@@ -403,32 +403,19 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.JsonFileSaver.directory
   nameWithType: JsonFileSaver.directory
-- uid: Cubusky.Heatgrids.JsonFileSaver.filePath
-  name: filePath
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_filePath
-  commentId: P:Cubusky.Heatgrids.JsonFileSaver.filePath
-  fullName: Cubusky.Heatgrids.JsonFileSaver.filePath
-  nameWithType: JsonFileSaver.filePath
-- uid: Cubusky.Heatgrids.JsonFileSaver.filePath*
-  name: filePath
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_filePath_
-  commentId: Overload:Cubusky.Heatgrids.JsonFileSaver.filePath
+- uid: Cubusky.Heatgrids.JsonFileSaver.directoryPath
+  name: directoryPath
+  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directoryPath
+  commentId: P:Cubusky.Heatgrids.JsonFileSaver.directoryPath
+  fullName: Cubusky.Heatgrids.JsonFileSaver.directoryPath
+  nameWithType: JsonFileSaver.directoryPath
+- uid: Cubusky.Heatgrids.JsonFileSaver.directoryPath*
+  name: directoryPath
+  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directoryPath_
+  commentId: Overload:Cubusky.Heatgrids.JsonFileSaver.directoryPath
   isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonFileSaver.filePath
-  nameWithType: JsonFileSaver.filePath
-- uid: Cubusky.Heatgrids.JsonFileSaver.guid
-  name: guid
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_guid
-  commentId: P:Cubusky.Heatgrids.JsonFileSaver.guid
-  fullName: Cubusky.Heatgrids.JsonFileSaver.guid
-  nameWithType: JsonFileSaver.guid
-- uid: Cubusky.Heatgrids.JsonFileSaver.guid*
-  name: guid
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_guid_
-  commentId: Overload:Cubusky.Heatgrids.JsonFileSaver.guid
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonFileSaver.guid
-  nameWithType: JsonFileSaver.guid
+  fullName: Cubusky.Heatgrids.JsonFileSaver.directoryPath
+  nameWithType: JsonFileSaver.directoryPath
 - uid: Cubusky.Heatgrids.JsonHeatgrid
   name: JsonHeatgrid
   href: api/Cubusky.Heatgrids.JsonHeatgrid.html
