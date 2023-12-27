@@ -263,6 +263,16 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "manual/images/lolz",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/lolz"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "manual/index.md",
       "output": {
