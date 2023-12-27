@@ -4,6 +4,11 @@
   "displayName": "Cubusky Heatgrids",
   "description": "A customizable heatmap solution able to record and display heatmap data. Heatgrids focuses on small and efficient file sizes in order to keep storage costs low. It does not store 3D positions, but cheap coordinates on an imaginary 3D grid.",
   "unity": "2022.3",
+  "documentationUrl": "https://cubusky.github.io/com.cubusky.heatgrids/",
+  "changelogUrl": "https://cubusky.github.io/com.cubusky.heatgrids/changelog/CHANGELOG.html",
+  "licensesUrl": "https://cubusky.github.io/com.cubusky.heatgrids/license/LICENSE.html",
+  "hideInEditor": false,
+  "type": "library",
   "dependencies": {
     "com.cubusky.core": "https://github.com/Cubusky/com.cubusky.core.git"
   },
