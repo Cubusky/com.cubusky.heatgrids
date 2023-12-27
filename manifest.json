@@ -1,0 +1,294 @@
+{
+  "sitemap": {
+    "baseUrl": "https://cubusky.github.io/com.cubusky.heatgrids/"
+  },
+  "source_base_path": "/home/runner/work/com.cubusky.heatgrids/com.cubusky.heatgrids/Documentation~",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.Heatgrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.Heatgrid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridDrawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridJsonLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridJsonLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridJsonRecorder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridJsonRecorder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.IHeatgrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.IHeatgrid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.IHeatgridLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.IHeatgridLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.IHeatgridSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.IHeatgridSaver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.IHeatgridVisualizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.IHeatgridVisualizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.JsonDirectoryLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.JsonDirectoryLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.JsonFileSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.JsonFileSaver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.JsonHeatgrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.JsonHeatgrid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.ParticleSystemVisualizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.ParticleSystemVisualizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.StepGradient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.StepGradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "changelog/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "changelog/toc.json"
+        },
+        ".html": {
+          "relative_path": "changelog/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "license/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "license/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "license/toc.json"
+        },
+        ".html": {
+          "relative_path": "license/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
