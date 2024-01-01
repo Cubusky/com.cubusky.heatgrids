@@ -2,6 +2,8 @@
 
 Heatgrids can be visualized through the `HeatgridDrawer` component, which takes visualizer and a heatgrid. Simply add a `HeatgridDrawer` to your scene and connect a `IHeatgrid` and a `IHeatgridVisualizer`. Then, right click the `HeatgridDrawer` header to access its context menu and select `SetAverage80`, then `Draw` to draw your heatmap.
 
+![](images/Heatgrid%20Drawer%20Draw.png)
+
 Visualizers can be custom implemented through the `IHeatgridVisualizer` interface.
 
 ## Particle Solution

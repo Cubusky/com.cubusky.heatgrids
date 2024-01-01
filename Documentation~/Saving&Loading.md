@@ -32,7 +32,6 @@ public sealed class HeatgridXmlLoader : HeatgridLoader
 
 Heatgrid comes builtin with a Json solution for saving & loading. Simply add a `HeatgridJsonRecorder` to the player character to start recording data about the player. This will save heatgrids to Unity's [persistent data path](https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html).
 
-> [!INFO]
-> Be aware that Heatgrids provides no out of the box solution for sending data to a server. It is recommended to implement a solution that sends (new) user data to a server at the end of their playing session.
+> **Be aware that Heatgrids provides no out of the box solution for sending data to a server. It is recommended to implement a solution that sends (new) user data to a server at the end of their playing session.**
 
 To load heatgrids from the [persistent data path](https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html), use a `HeatgridJsonLoader` and it will collect all the heatgrids that have been saved and combine them into 1 large heatgrid.
