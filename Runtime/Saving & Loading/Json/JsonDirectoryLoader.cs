@@ -5,7 +5,6 @@ using System;
 
 namespace Cubusky.Heatgrids
 {
-    [Serializable]
     public class JsonDirectoryLoader : IHeatgridLoader
     {
         [field: SerializeField] public string directory { get; set; } = "Heatgrids/LevelName/CharacterName";

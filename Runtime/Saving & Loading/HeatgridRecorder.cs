@@ -8,7 +8,7 @@ namespace Cubusky.Heatgrids
         void Save(IHeatgrid heatgrid);
     }
 
-    public abstract class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver
+    public class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver
     {
         [field: SerializeField, Min(0f)] public float minimumRecordingTime { get; set; } = 10f;
 
@@ -19,8 +19,8 @@ namespace Cubusky.Heatgrids
             private set => _recordingTime = value;
         }
 
-        public abstract IHeatgrid heatgrid { get; }
-        public abstract IHeatgridSaver saver { get; }
+        [field: SerializeReference, ReferenceDropdown] public IHeatgrid heatgrid { get; set; }
+        [field: SerializeReference, ReferenceDropdown] public IHeatgridSaver saver { get; set; }
 
         Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
         float IHeatgrid.cellSize => heatgrid.cellSize;
