@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Cubusky.Heatgrids
 {
-    [Serializable]
     public class JsonFileSaver : IHeatgridSaver
     {
         [field: SerializeField] public string directory { get; set; } = "Heatgrids/LevelName/CharacterName";

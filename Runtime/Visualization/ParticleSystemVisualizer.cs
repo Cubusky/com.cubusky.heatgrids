@@ -1,34 +1,54 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using Object = UnityEngine.Object;
 
 namespace Cubusky.Heatgrids
 {
     [RequireComponent(typeof(ParticleSystem))]
-    public class ParticleSystemVisualizer : MonoBehaviour, IHeatgridVisualizer, ISerializationCallbackReceiver
+    public class ParticleSystemVisualizer : MonoBehaviour, IHeatgrid, IHeatgridVisualizer, ISerializationCallbackReceiver
     {
         [field: SerializeField, HideInInspector] public new ParticleSystem particleSystem { get; private set; }
+
+        [SerializeField, OfType(typeof(IHeatgrid))] private Object _heatgrid;
         [field: SerializeField] public StepGradient stepGradient { get; set; }
         [field: SerializeField] public float sizeMultiplier { get; set; } = 2.5f;
 
-        private void Reset()
-        {
-            InitializeComponents();
+        public IHeatgrid heatgrid { get; set; }
+        private IHeatgridVisualizer visualizer => this;
 
-#if UNITY_EDITOR
-            ParticleSystemRenderer renderer = GetComponent<ParticleSystemRenderer>();
-            if (!renderer.sharedMaterial)
+        Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
+        float IHeatgrid.cellSize => heatgrid.cellSize;
+
+        #region Serialization & Initialization
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            _heatgrid = heatgrid as Object;
+            try
             {
-                const string materialName = "Default-Particle";
-                renderer.sharedMaterial = UnityEditor.AssetDatabase.GetBuiltinExtraResource<Material>($"{materialName}.mat");
-                Debug.Log($"Assigned \"{materialName}\" to the {nameof(ParticleSystem)}'s {nameof(Material)}. Note that instantiating {nameof(ParticleSystemVisualizer)}'s from script does not automatically assign a {nameof(Material)} to the {nameof(ParticleSystem)}.", this);
+                UpdateParticleSystem();
             }
-#endif
+            catch (NullReferenceException) { }
         }
 
-        private void Awake()
+        void ISerializationCallbackReceiver.OnAfterDeserialize() => heatgrid = _heatgrid as IHeatgrid;
+
+        private void UpdateParticleSystem()
         {
-            InitializeComponents();
+            var colorBySpeed = particleSystem.colorBySpeed;
+            var colorBySpeedColor = colorBySpeed.color;
+            colorBySpeedColor.gradient = stepGradient.gradient;
+            colorBySpeed.color = colorBySpeedColor;
+
+            var sizeBySpeed = particleSystem.sizeBySpeed;
+            colorBySpeed.range = sizeBySpeed.range = new Vector2(stepGradient.minSteps, stepGradient.maxSteps);
+
+            var sizeOverLifetime = particleSystem.sizeOverLifetime;
+            sizeOverLifetime.sizeMultiplier = sizeMultiplier;
+
+            particleSystem.Pause();
         }
 
         private void InitializeComponents()
@@ -59,30 +79,51 @@ namespace Cubusky.Heatgrids
             particleSystemRenderer.allowRoll = false;
             particleSystemRenderer.alignment = ParticleSystemRenderSpace.Facing;
         }
+        #endregion
 
-        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        #region Context Methods
+        [ContextMenu(nameof(SetAverageSteps))]
+        private void SetAverageSteps()
         {
-            try
-            {
-                var colorBySpeed = particleSystem.colorBySpeed;
-                var colorBySpeedColor = colorBySpeed.color;
-                colorBySpeedColor.gradient = stepGradient.gradient;
-                colorBySpeed.color = colorBySpeedColor;
-
-                var sizeBySpeed = particleSystem.sizeBySpeed;
-                colorBySpeed.range = sizeBySpeed.range = new Vector2(stepGradient.minSteps, stepGradient.maxSteps);
-
-                var sizeOverLifetime = particleSystem.sizeOverLifetime;
-                sizeOverLifetime.sizeMultiplier = sizeMultiplier;
-            }
-            catch (NullReferenceException) { }
-
-            particleSystem.Pause();
+            var average = heatgrid.grid.Values.Average();
+            stepGradient.minSteps = (int)Math.Ceiling(average * 0.2);
+            stepGradient.maxSteps = (int)Math.Ceiling(average * 1.8);
         }
 
-        void ISerializationCallbackReceiver.OnAfterDeserialize() { }
+        [ContextMenu(nameof(SetMaxParticles))]
+        private void SetMaxParticles()
+        {
+            var main = particleSystem.main;
+            main.maxParticles = Mathf.Max(main.maxParticles, heatgrid.grid.Count);
+            Debug.LogWarning($"Max Particles have been set. Note that a large amount of particles may impact editor performance.");
+        }
 
-        private Particle[] particles;
+        [ContextMenu(nameof(Visualize))]
+        private void Visualize() => visualizer.Visualize(this);
+
+        [ContextMenu(nameof(Stop))]
+        private void Stop() => particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        #endregion
+
+        private void Reset()
+        {
+            InitializeComponents();
+
+#if UNITY_EDITOR
+            ParticleSystemRenderer renderer = GetComponent<ParticleSystemRenderer>();
+            if (!renderer.sharedMaterial)
+            {
+                const string materialName = "Default-Particle";
+                renderer.sharedMaterial = UnityEditor.AssetDatabase.GetBuiltinExtraResource<Material>($"{materialName}.mat");
+                Debug.Log($"Assigned \"{materialName}\" to the {nameof(ParticleSystem)}'s {nameof(Material)}. Note that instantiating {nameof(ParticleSystemVisualizer)}'s from script does not automatically assign a {nameof(Material)} to the {nameof(ParticleSystem)}.", this);
+            }
+#endif
+        }
+
+        private void Awake()
+        {
+            InitializeComponents();
+        }
 
         void IHeatgridVisualizer.Visualize(IHeatgrid heatgrid)
         {
@@ -91,7 +132,7 @@ namespace Cubusky.Heatgrids
                 return;
             }
 
-            particles = new Particle[heatgrid.grid.Count];
+            var particles = new Particle[heatgrid.grid.Count];
             int particleIndex = 0;
 
             foreach (var cell in heatgrid.grid)

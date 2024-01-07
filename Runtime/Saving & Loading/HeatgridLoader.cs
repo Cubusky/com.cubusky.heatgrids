@@ -8,9 +8,9 @@ namespace Cubusky.Heatgrids
         Dictionary<Vector3Int, int> Load(out float cellSize);
     }
 
-    public abstract class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader
+    public class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader
     {
-        public abstract IHeatgridLoader loader { get; }
+        [field: SerializeReference, ReferenceDropdown] public IHeatgridLoader loader { get; set; }
 
         Dictionary<Vector3Int, int> IHeatgridLoader.Load(out float cellSize) => loader.Load(out cellSize);
 
