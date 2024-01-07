@@ -92,10 +92,7 @@
 <p>With the <code>JsonDirectoryLoader</code> inside your <code>HeatgridLoader</code> selected, heatgrids in json format will be collected from the <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">persistent data path</a> and combined into 1 large heatgrid.</p>
 <h2 id="custom-solutions">Custom Solutions</h2>
 <p>Derive from <code>IHeatgridSaver</code> to implement a custom heatgrid saving solution, and derive from <code>IHeatgridLoader</code> to implement a custom heatgrid loading solution.</p>
-<pre><code class="lang-csharp">[Serializable]
-public class XmlFileSaver : IHeatgridSaver { ... }
-
-[Serializable]
+<pre><code class="lang-csharp">public class XmlFileSaver : IHeatgridSaver { ... }
 public class XmlDirectoryLoader : IHeatgridLoader { ... }
 </code></pre>
 <p>These will be selectable inside the <code>HeatgridRecorder</code> and <code>HeatgridLoader</code> respectively.</p>
