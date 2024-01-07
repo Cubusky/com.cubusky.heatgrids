@@ -25,14 +25,9 @@ namespace Cubusky.Heatgrids
         [field: SerializeField]
         public Gradient gradient { get; set; } = new Gradient()
         {
-            //alphaKeys = new GradientAlphaKey[]
-            //{
-            //    new(0.1f, 0f),
-            //    new(0.5f, 1f),
-            //},
             colorKeys = new GradientColorKey[]
             {
-                new(new(0, 0, 1, 0.5f), 0f),
+                new(Color.blue, 0f),
                 new(Color.green, 0.5f),
                 new(Color.red, 1f),
             },
