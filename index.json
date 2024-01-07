@@ -1,122 +1,107 @@
 {
   "api/Cubusky.Heatgrids.Heatgrid.html": {
     "href": "api/Cubusky.Heatgrids.Heatgrid.html",
-    "title": "Class Heatgrid | Heatgrids | 0.1.0-exp",
+    "title": "Class Heatgrid | Heatgrids | 0.2.0-exp",
     "keywords": "Class Heatgrid Namespace Cubusky.Heatgrids [Serializable] public class Heatgrid : IHeatgrid Inheritance object Heatgrid Implements IHeatgrid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties cellSize public float cellSize { get; set; } Property Value float grid public Dictionary<Vector3Int, int> grid { get; set; } Property Value Dictionary<Vector3Int, int>"
-  },
-  "api/Cubusky.Heatgrids.HeatgridDrawer.html": {
-    "href": "api/Cubusky.Heatgrids.HeatgridDrawer.html",
-    "title": "Class HeatgridDrawer | Heatgrids | 0.1.0-exp",
-    "keywords": "Class HeatgridDrawer Namespace Cubusky.Heatgrids public sealed class HeatgridDrawer : MonoBehaviour, IHeatgrid, IHeatgridVisualizer Inheritance object HeatgridDrawer Implements IHeatgrid IHeatgridVisualizer"
-  },
-  "api/Cubusky.Heatgrids.HeatgridJsonLoader.html": {
-    "href": "api/Cubusky.Heatgrids.HeatgridJsonLoader.html",
-    "title": "Class HeatgridJsonLoader | Heatgrids | 0.1.0-exp",
-    "keywords": "Class HeatgridJsonLoader Namespace Cubusky.Heatgrids public sealed class HeatgridJsonLoader : HeatgridLoader, IHeatgrid, IHeatgridLoader Inheritance object HeatgridLoader HeatgridJsonLoader Implements IHeatgrid IHeatgridLoader Inherited Members HeatgridLoader.EmptyCache() Properties loader public override IHeatgridLoader loader { get; } Property Value IHeatgridLoader"
-  },
-  "api/Cubusky.Heatgrids.HeatgridJsonRecorder.html": {
-    "href": "api/Cubusky.Heatgrids.HeatgridJsonRecorder.html",
-    "title": "Class HeatgridJsonRecorder | Heatgrids | 0.1.0-exp",
-    "keywords": "Class HeatgridJsonRecorder Namespace Cubusky.Heatgrids public sealed class HeatgridJsonRecorder : HeatgridRecorder, IHeatgrid, IHeatgridSaver Inheritance object HeatgridRecorder HeatgridJsonRecorder Implements IHeatgrid IHeatgridSaver Inherited Members HeatgridRecorder.minimumRecordingTime HeatgridRecorder.recordingTime Properties heatgrid public override IHeatgrid heatgrid { get; } Property Value IHeatgrid saver public override IHeatgridSaver saver { get; } Property Value IHeatgridSaver"
   },
   "api/Cubusky.Heatgrids.HeatgridLoader.html": {
     "href": "api/Cubusky.Heatgrids.HeatgridLoader.html",
-    "title": "Class HeatgridLoader | Heatgrids | 0.1.0-exp",
-    "keywords": "Class HeatgridLoader Namespace Cubusky.Heatgrids public abstract class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader Inheritance object HeatgridLoader Implements IHeatgrid IHeatgridLoader Derived HeatgridJsonLoader Properties loader public abstract IHeatgridLoader loader { get; } Property Value IHeatgridLoader Methods EmptyCache() public void EmptyCache()"
+    "title": "Class HeatgridLoader | Heatgrids | 0.2.0-exp",
+    "keywords": "Class HeatgridLoader Namespace Cubusky.Heatgrids public class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader Inheritance object HeatgridLoader Implements IHeatgrid IHeatgridLoader Properties loader public IHeatgridLoader loader { get; set; } Property Value IHeatgridLoader Methods EmptyCache() public void EmptyCache()"
   },
   "api/Cubusky.Heatgrids.HeatgridRecorder.html": {
     "href": "api/Cubusky.Heatgrids.HeatgridRecorder.html",
-    "title": "Class HeatgridRecorder | Heatgrids | 0.1.0-exp",
-    "keywords": "Class HeatgridRecorder Namespace Cubusky.Heatgrids public abstract class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver Inheritance object HeatgridRecorder Implements IHeatgrid IHeatgridSaver Derived HeatgridJsonRecorder Properties heatgrid public abstract IHeatgrid heatgrid { get; } Property Value IHeatgrid minimumRecordingTime public float minimumRecordingTime { get; set; } Property Value float recordingTime public float recordingTime { get; } Property Value float saver public abstract IHeatgridSaver saver { get; } Property Value IHeatgridSaver"
+    "title": "Class HeatgridRecorder | Heatgrids | 0.2.0-exp",
+    "keywords": "Class HeatgridRecorder Namespace Cubusky.Heatgrids public class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver Inheritance object HeatgridRecorder Implements IHeatgrid IHeatgridSaver Properties heatgrid public IHeatgrid heatgrid { get; set; } Property Value IHeatgrid minimumRecordingTime public float minimumRecordingTime { get; set; } Property Value float recordingTime public float recordingTime { get; } Property Value float saver public IHeatgridSaver saver { get; set; } Property Value IHeatgridSaver"
   },
   "api/Cubusky.Heatgrids.HeatgridUtility.html": {
     "href": "api/Cubusky.Heatgrids.HeatgridUtility.html",
-    "title": "Class HeatgridUtility | Heatgrids | 0.1.0-exp",
+    "title": "Class HeatgridUtility | Heatgrids | 0.2.0-exp",
     "keywords": "Class HeatgridUtility Namespace Cubusky.Heatgrids public static class HeatgridUtility Inheritance object HeatgridUtility Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MergeGrids(params Dictionary<Vector3Int, int>[]) public static Dictionary<Vector3Int, int> MergeGrids(params Dictionary<Vector3Int, int>[] grids) Parameters grids Dictionary<Vector3Int, int>[] Returns Dictionary<Vector3Int, int>"
   },
   "api/Cubusky.Heatgrids.IHeatgrid.html": {
     "href": "api/Cubusky.Heatgrids.IHeatgrid.html",
-    "title": "Interface IHeatgrid | Heatgrids | 0.1.0-exp",
+    "title": "Interface IHeatgrid | Heatgrids | 0.2.0-exp",
     "keywords": "Interface IHeatgrid Namespace Cubusky.Heatgrids public interface IHeatgrid Properties cellSize float cellSize { get; } Property Value float grid Dictionary<Vector3Int, int> grid { get; } Property Value Dictionary<Vector3Int, int> Methods GridToWorld(Vector3Int) Vector3 GridToWorld(Vector3Int coordinates) Parameters coordinates Vector3Int Returns Vector3 WorldToGrid(Vector3) Vector3Int WorldToGrid(Vector3 position) Parameters position Vector3 Returns Vector3Int"
   },
   "api/Cubusky.Heatgrids.IHeatgridLoader.html": {
     "href": "api/Cubusky.Heatgrids.IHeatgridLoader.html",
-    "title": "Interface IHeatgridLoader | Heatgrids | 0.1.0-exp",
+    "title": "Interface IHeatgridLoader | Heatgrids | 0.2.0-exp",
     "keywords": "Interface IHeatgridLoader Namespace Cubusky.Heatgrids public interface IHeatgridLoader Methods Load(out float) Dictionary<Vector3Int, int> Load(out float cellSize) Parameters cellSize float Returns Dictionary<Vector3Int, int>"
   },
   "api/Cubusky.Heatgrids.IHeatgridSaver.html": {
     "href": "api/Cubusky.Heatgrids.IHeatgridSaver.html",
-    "title": "Interface IHeatgridSaver | Heatgrids | 0.1.0-exp",
+    "title": "Interface IHeatgridSaver | Heatgrids | 0.2.0-exp",
     "keywords": "Interface IHeatgridSaver Namespace Cubusky.Heatgrids public interface IHeatgridSaver Methods Save(IHeatgrid) void Save(IHeatgrid heatgrid) Parameters heatgrid IHeatgrid"
   },
   "api/Cubusky.Heatgrids.IHeatgridVisualizer.html": {
     "href": "api/Cubusky.Heatgrids.IHeatgridVisualizer.html",
-    "title": "Interface IHeatgridVisualizer | Heatgrids | 0.1.0-exp",
-    "keywords": "Interface IHeatgridVisualizer Namespace Cubusky.Heatgrids public interface IHeatgridVisualizer Properties stepGradient StepGradient stepGradient { get; } Property Value StepGradient Methods Visualize(IHeatgrid) void Visualize(IHeatgrid heatgrid) Parameters heatgrid IHeatgrid"
+    "title": "Interface IHeatgridVisualizer | Heatgrids | 0.2.0-exp",
+    "keywords": "Interface IHeatgridVisualizer Namespace Cubusky.Heatgrids public interface IHeatgridVisualizer Methods Visualize(IHeatgrid) void Visualize(IHeatgrid heatgrid) Parameters heatgrid IHeatgrid"
   },
   "api/Cubusky.Heatgrids.JsonDirectoryLoader.html": {
     "href": "api/Cubusky.Heatgrids.JsonDirectoryLoader.html",
-    "title": "Class JsonDirectoryLoader | Heatgrids | 0.1.0-exp",
-    "keywords": "Class JsonDirectoryLoader Namespace Cubusky.Heatgrids [Serializable] public class JsonDirectoryLoader : IHeatgridLoader Inheritance object JsonDirectoryLoader Implements IHeatgridLoader Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string fileDirectory public string fileDirectory { get; } Property Value string searchOption public SearchOption searchOption { get; set; } Property Value SearchOption"
+    "title": "Class JsonDirectoryLoader | Heatgrids | 0.2.0-exp",
+    "keywords": "Class JsonDirectoryLoader Namespace Cubusky.Heatgrids public class JsonDirectoryLoader : IHeatgridLoader Inheritance object JsonDirectoryLoader Implements IHeatgridLoader Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string fileDirectory public string fileDirectory { get; } Property Value string searchOption public SearchOption searchOption { get; set; } Property Value SearchOption"
   },
   "api/Cubusky.Heatgrids.JsonFileSaver.html": {
     "href": "api/Cubusky.Heatgrids.JsonFileSaver.html",
-    "title": "Class JsonFileSaver | Heatgrids | 0.1.0-exp",
-    "keywords": "Class JsonFileSaver Namespace Cubusky.Heatgrids [Serializable] public class JsonFileSaver : IHeatgridSaver Inheritance object JsonFileSaver Implements IHeatgridSaver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string directoryPath public string directoryPath { get; } Property Value string"
+    "title": "Class JsonFileSaver | Heatgrids | 0.2.0-exp",
+    "keywords": "Class JsonFileSaver Namespace Cubusky.Heatgrids public class JsonFileSaver : IHeatgridSaver Inheritance object JsonFileSaver Implements IHeatgridSaver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties directory public string directory { get; set; } Property Value string directoryPath public string directoryPath { get; } Property Value string"
   },
   "api/Cubusky.Heatgrids.JsonHeatgrid.html": {
     "href": "api/Cubusky.Heatgrids.JsonHeatgrid.html",
-    "title": "Class JsonHeatgrid | Heatgrids | 0.1.0-exp",
+    "title": "Class JsonHeatgrid | Heatgrids | 0.2.0-exp",
     "keywords": "Class JsonHeatgrid Namespace Cubusky.Heatgrids [Serializable] public class JsonHeatgrid Inheritance object JsonHeatgrid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors JsonHeatgrid(IHeatgrid) public JsonHeatgrid(IHeatgrid heatgrid) Parameters heatgrid IHeatgrid Fields grid public int[] grid Field Value int[] Methods FromJson(string, out float) public static Dictionary<Vector3Int, int> FromJson(string json, out float cellSize) Parameters json string cellSize float Returns Dictionary<Vector3Int, int> ToHeatgrid(out float) public Dictionary<Vector3Int, int> ToHeatgrid(out float cellSize) Parameters cellSize float Returns Dictionary<Vector3Int, int> ToJson(IHeatgrid) public static string ToJson(IHeatgrid heatgrid) Parameters heatgrid IHeatgrid Returns string"
   },
   "api/Cubusky.Heatgrids.ParticleSystemVisualizer.html": {
     "href": "api/Cubusky.Heatgrids.ParticleSystemVisualizer.html",
-    "title": "Class ParticleSystemVisualizer | Heatgrids | 0.1.0-exp",
-    "keywords": "Class ParticleSystemVisualizer Namespace Cubusky.Heatgrids public class ParticleSystemVisualizer : MonoBehaviour, IHeatgridVisualizer, ISerializationCallbackReceiver Inheritance object ParticleSystemVisualizer Implements IHeatgridVisualizer ISerializationCallbackReceiver Properties particleSystem public ParticleSystem particleSystem { get; } Property Value ParticleSystem sizeMultiplier public float sizeMultiplier { get; set; } Property Value float stepGradient public StepGradient stepGradient { get; set; } Property Value StepGradient"
+    "title": "Class ParticleSystemVisualizer | Heatgrids | 0.2.0-exp",
+    "keywords": "Class ParticleSystemVisualizer Namespace Cubusky.Heatgrids public class ParticleSystemVisualizer : MonoBehaviour, IHeatgrid, IHeatgridVisualizer, ISerializationCallbackReceiver Inheritance object ParticleSystemVisualizer Implements IHeatgrid IHeatgridVisualizer ISerializationCallbackReceiver Properties heatgrid public IHeatgrid heatgrid { get; set; } Property Value IHeatgrid particleSystem public ParticleSystem particleSystem { get; } Property Value ParticleSystem sizeMultiplier public float sizeMultiplier { get; set; } Property Value float stepGradient public StepGradient stepGradient { get; set; } Property Value StepGradient"
   },
   "api/Cubusky.Heatgrids.StepGradient.html": {
     "href": "api/Cubusky.Heatgrids.StepGradient.html",
-    "title": "Class StepGradient | Heatgrids | 0.1.0-exp",
+    "title": "Class StepGradient | Heatgrids | 0.2.0-exp",
     "keywords": "Class StepGradient Namespace Cubusky.Heatgrids [Serializable] public class StepGradient : ISerializationCallbackReceiver Inheritance object StepGradient Properties gradient public Gradient gradient { get; set; } Property Value Gradient maxSteps public int maxSteps { get; set; } Property Value int minSteps public int minSteps { get; set; } Property Value int Methods Evaluate(int) public Color Evaluate(int steps) Parameters steps int Returns Color"
   },
   "api/Cubusky.Heatgrids.html": {
     "href": "api/Cubusky.Heatgrids.html",
-    "title": "Namespace Cubusky.Heatgrids | Heatgrids | 0.1.0-exp",
-    "keywords": "Namespace Cubusky.Heatgrids Classes Heatgrid HeatgridDrawer HeatgridJsonLoader HeatgridJsonRecorder HeatgridLoader HeatgridRecorder HeatgridUtility JsonDirectoryLoader JsonFileSaver JsonHeatgrid ParticleSystemVisualizer StepGradient Interfaces IHeatgrid IHeatgridLoader IHeatgridSaver IHeatgridVisualizer"
+    "title": "Namespace Cubusky.Heatgrids | Heatgrids | 0.2.0-exp",
+    "keywords": "Namespace Cubusky.Heatgrids Classes Heatgrid HeatgridLoader HeatgridRecorder HeatgridUtility JsonDirectoryLoader JsonFileSaver JsonHeatgrid ParticleSystemVisualizer StepGradient Interfaces IHeatgrid IHeatgridLoader IHeatgridSaver IHeatgridVisualizer"
   },
   "api/index.html": {
     "href": "api/index.html",
-    "title": "| Heatgrids | 0.1.0-exp",
+    "title": "| Heatgrids | 0.2.0-exp",
     "keywords": "This is the documentation for the Scripting APIs of this package."
   },
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
-    "title": "Changelog | Heatgrids | 0.1.0-exp",
+    "title": "Changelog | Heatgrids | 0.2.0-exp",
     "keywords": "Changelog All notable changes to this package will be documented in this file. The format is based on Keep a Changelog and this project adheres to Semantic Versioning. [0.1.0-exp] - 2023-12-27 This is the first release of Heatgrids. A customizable heatmap solution able to record and display heatmap data. Heatgrids focuses on small and efficient file sizes in order to keep storage costs low. It does not store 3D positions, but cheap coordinates on an imaginary 3D grid."
   },
   "index.html": {
     "href": "index.html",
-    "title": "| Heatgrids | 0.1.0-exp",
+    "title": "| Heatgrids | 0.2.0-exp",
     "keywords": "This page redirects to the manual."
   },
   "license/LICENSE.html": {
     "href": "license/LICENSE.html",
-    "title": "| Heatgrids | 0.1.0-exp",
+    "title": "| Heatgrids | 0.2.0-exp",
     "keywords": "MIT License Copyright (c) 2023 Cubusky Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   },
   "manual/Saving&Loading.html": {
     "href": "manual/Saving&Loading.html",
-    "title": "Saving & Loading | Heatgrids | 0.1.0-exp",
-    "keywords": "Saving & Loading Saving & Loading is one of the most important aspects of Heatgrids, as it makes decisions about what data is important enough to store, and what data is important enough of collect. Because of this, Heatgrid exposes its functionality through interfaces. Derive from IHeatgridSaver to implement a custom heatgrid saving solution, and derive from IHeatgridLoader to implement a custom heatgrid loading solution. Derive from HeatgridRecorder and HeatgridLoader respectively to expose these through components. [Serializable] public class XmlFileSaver : IHeatgridSaver { ... } [Serializable] public class XmlDirectoryLoader : IHeatgridLoader { ... } public sealed class HeatgridXmlRecorder : HeatgridRecorder { [SerializeField] private Heatgrid _heatgrid = new(); [SerializeField] private XmlFileSaver _saver = new(); public override IHeatgrid heatgrid => _heatgrid; public override IHeatgridSaver saver => _saver; } public sealed class HeatgridXmlLoader : HeatgridLoader { [SerializeField] private XmlDirectoryLoader _loader = new(); public override IHeatgridLoader loader => _loader; } Json Solution Heatgrid comes builtin with a Json solution for saving & loading. Simply add a HeatgridJsonRecorder to the player character to start recording data about the player. This will save heatgrids to Unity's persistent data path. Be aware that Heatgrids provides no out of the box solution for sending data to a server. It is recommended to implement a solution that sends (new) user data to a server at the end of their playing session. To load heatgrids from the persistent data path, use a HeatgridJsonLoader and it will collect all the heatgrids that have been saved and combine them into 1 large heatgrid."
+    "title": "Saving & Loading | Heatgrids | 0.2.0-exp",
+    "keywords": "Saving & Loading Saving & Loading is one of the most important aspects of Heatgrids, as it makes decisions about what data is important enough to store, and what data is important enough of collect. Because of this, Heatgrid exposes its functionality through interfaces. Implementations of these interfaces can be selected through the HeatgridRecorder and HeatgridLoader, according to the requirements of the ReferenceDropdownAttribute. Json Solution With the JsonFileSaver inside your HeatgridRecorder selected, heatgrids will be saved to Unity's persistent data path in json format. With the JsonDirectoryLoader inside your HeatgridLoader selected, heatgrids in json format will be collected from the persistent data path and combined into 1 large heatgrid. Custom Solutions Derive from IHeatgridSaver to implement a custom heatgrid saving solution, and derive from IHeatgridLoader to implement a custom heatgrid loading solution. [Serializable] public class XmlFileSaver : IHeatgridSaver { ... } [Serializable] public class XmlDirectoryLoader : IHeatgridLoader { ... } These will be selectable inside the HeatgridRecorder and HeatgridLoader respectively."
   },
   "manual/Visualization.html": {
     "href": "manual/Visualization.html",
-    "title": "Visualization | Heatgrids | 0.1.0-exp",
-    "keywords": "Visualization Heatgrids can be visualized through the HeatgridDrawer component, which takes visualizer and a heatgrid. Simply add a HeatgridDrawer to your scene and connect a IHeatgrid and a IHeatgridVisualizer. Then, right click the HeatgridDrawer header to access its context menu and select SetAverage80, then Draw to draw your heatmap. Visualizers can be custom implemented through the IHeatgridVisualizer interface. Particle Solution Heatgrids comes builtin with a particle solution for visualizing heatgrids. Simply add a ParticleSystemVisualizer to your scene and connect it to a HeatgridDrawer. You can play with the ParticleSystemVisualizer settings at runtime to hone in on the data you are particularly interested in."
+    "title": "Visualization | Heatgrids | 0.2.0-exp",
+    "keywords": "Visualization Visualizers can be custom implemented through the IHeatgridVisualizer interface. Particle Solution Heatgrids comes builtin with a particle solution for visualizing heatgrids. Simply add a ParticleSystemVisualizer to your scene and select an IHeatgrid to visualize. You can play with the ParticleSystemVisualizer settings at runtime to hone in on the data you are particularly interested in. The context menu (see \"Component context menu commands\") provides very simple methods to setup your ParticleSystem. SetAverageSteps will set the min- and max steps to a reasonable range. SetMaxParticles will set the maximum particles needed to visualize the heatgrid. Visualize will visualize the heatgrid."
   },
   "manual/index.html": {
     "href": "manual/index.html",
-    "title": "About Heatgrids | Heatgrids | 0.1.0-exp",
-    "keywords": "About Heatgrids Heatgrids is a customizable heatmap solution able to record and display heatmap data. Heatgrids focuses on small and efficient file sizes in order to keep storage costs low. It does not store 3D positions, but cheap coordinates on an imaginary 3D grid. Installing Heatgrids To install this package, follow the instructions on the Package Manager documentation after adding the following lines in your manifest.json { \"dependencies\": { \"com.cubusky.core\": \"https://github.com/Cubusky/com.cubusky.core.git\" } } Requirements This version of Heatgrids is compatible with the following versions of the Unity Editor: 2022.3 and later (recommended) Known Limitations Heatgrids 0.1.0-exp includes the following known limitations: No currently known limitations."
+    "title": "About Heatgrids | Heatgrids | 0.2.0-exp",
+    "keywords": "About Heatgrids Heatgrids is a customizable heatmap solution able to record and display heatmap data. Heatgrids focuses on small and efficient file sizes in order to keep storage costs low. It does not store 3D positions, but cheap coordinates on an imaginary 3D grid. Installing Heatgrids To install this package, follow the instructions on the Package Manager documentation after adding the following lines in your manifest.json { \"dependencies\": { \"com.cubusky.core\": \"https://github.com/Cubusky/com.cubusky.core.git#1.1.0\" } } Requirements This version of Heatgrids is compatible with the following versions of the Unity Editor: 2022.3 and later (recommended) Known Limitations Heatgrids 0.2.0-exp includes the following known limitations: No currently known limitations."
   }
 }

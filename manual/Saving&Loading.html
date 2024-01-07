@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Saving &amp; Loading | Heatgrids | 0.1.0-exp </title>
+      <title>Saving &amp; Loading | Heatgrids | 0.2.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Saving &amp; Loading | Heatgrids | 0.1.0-exp ">
+      <meta name="title" content="Saving &amp; Loading | Heatgrids | 0.2.0-exp ">
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -86,36 +86,19 @@
         <article data-uid="">
 <h1 id="saving--loading">Saving &amp; Loading</h1>
 
-<p>Saving &amp; Loading is one of the most important aspects of Heatgrids, as it makes decisions about what data is important enough to store, and what data is important enough of collect. Because of this, Heatgrid exposes its functionality through interfaces.</p>
-<p>Derive from <code>IHeatgridSaver</code> to implement a custom heatgrid saving solution, and derive from <code>IHeatgridLoader</code> to implement a custom heatgrid loading solution. Derive from <code>HeatgridRecorder</code> and <code>HeatgridLoader</code> respectively to expose these through components.</p>
+<p>Saving &amp; Loading is one of the most important aspects of Heatgrids, as it makes decisions about what data is important enough to store, and what data is important enough of collect. Because of this, Heatgrid exposes its functionality through interfaces. Implementations of these interfaces can be selected through the <code>HeatgridRecorder</code> and <code>HeatgridLoader</code>, according to the requirements of the <a href="https://cubusky.github.io/com.cubusky.core/manual/ReferenceDropdownAttribute.html#restrictions">ReferenceDropdownAttribute</a>.</p>
+<h2 id="json-solution">Json Solution</h2>
+<p>With the <code>JsonFileSaver</code> inside your <code>HeatgridRecorder</code> selected, heatgrids will be saved to Unity's <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">persistent data path</a> in json format.</p>
+<p>With the <code>JsonDirectoryLoader</code> inside your <code>HeatgridLoader</code> selected, heatgrids in json format will be collected from the <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">persistent data path</a> and combined into 1 large heatgrid.</p>
+<h2 id="custom-solutions">Custom Solutions</h2>
+<p>Derive from <code>IHeatgridSaver</code> to implement a custom heatgrid saving solution, and derive from <code>IHeatgridLoader</code> to implement a custom heatgrid loading solution.</p>
 <pre><code class="lang-csharp">[Serializable]
 public class XmlFileSaver : IHeatgridSaver { ... }
 
 [Serializable]
 public class XmlDirectoryLoader : IHeatgridLoader { ... }
-
-public sealed class HeatgridXmlRecorder : HeatgridRecorder
-{
-    [SerializeField] private Heatgrid _heatgrid = new();
-    [SerializeField] private XmlFileSaver _saver = new();
-
-    public override IHeatgrid heatgrid =&gt; _heatgrid;
-    public override IHeatgridSaver saver =&gt; _saver;
-}
-
-public sealed class HeatgridXmlLoader : HeatgridLoader
-{
-    [SerializeField] private XmlDirectoryLoader _loader = new();
-
-    public override IHeatgridLoader loader =&gt; _loader;
-}
 </code></pre>
-<h2 id="json-solution">Json Solution</h2>
-<p>Heatgrid comes builtin with a Json solution for saving &amp; loading. Simply add a <code>HeatgridJsonRecorder</code> to the player character to start recording data about the player. This will save heatgrids to Unity's <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">persistent data path</a>.</p>
-<blockquote>
-<p><strong>Be aware that Heatgrids provides no out of the box solution for sending data to a server. It is recommended to implement a solution that sends (new) user data to a server at the end of their playing session.</strong></p>
-</blockquote>
-<p>To load heatgrids from the <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">persistent data path</a>, use a <code>HeatgridJsonLoader</code> and it will collect all the heatgrids that have been saved and combine them into 1 large heatgrid.</p>
+<p>These will be selectable inside the <code>HeatgridRecorder</code> and <code>HeatgridLoader</code> respectively.</p>
 
 </article>
 

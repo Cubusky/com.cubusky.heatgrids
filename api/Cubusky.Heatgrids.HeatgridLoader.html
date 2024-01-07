@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class HeatgridLoader
- | Heatgrids | 0.1.0-exp </title>
+ | Heatgrids | 0.2.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class HeatgridLoader
- | Heatgrids | 0.1.0-exp ">
+ | Heatgrids | 0.2.0-exp ">
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -103,7 +103,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader</code></pre>
+    <pre><code class="lang-csharp hljs">public class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader</code></pre>
   </div>
 
 
@@ -125,12 +125,6 @@
     </dd>
   </dl>
 
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="Cubusky.Heatgrids.HeatgridJsonLoader.html">HeatgridJsonLoader</a></div>
-    </dd>
-  </dl>
 
 
 
@@ -153,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IHeatgridLoader loader { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IHeatgridLoader loader { get; set; }</code></pre>
   </div>
 
 

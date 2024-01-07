@@ -39,63 +39,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.Heatgrid.grid
   nameWithType: Heatgrid.grid
-- uid: Cubusky.Heatgrids.HeatgridDrawer
-  name: HeatgridDrawer
-  href: api/Cubusky.Heatgrids.HeatgridDrawer.html
-  commentId: T:Cubusky.Heatgrids.HeatgridDrawer
-  fullName: Cubusky.Heatgrids.HeatgridDrawer
-  nameWithType: HeatgridDrawer
-- uid: Cubusky.Heatgrids.HeatgridJsonLoader
-  name: HeatgridJsonLoader
-  href: api/Cubusky.Heatgrids.HeatgridJsonLoader.html
-  commentId: T:Cubusky.Heatgrids.HeatgridJsonLoader
-  fullName: Cubusky.Heatgrids.HeatgridJsonLoader
-  nameWithType: HeatgridJsonLoader
-- uid: Cubusky.Heatgrids.HeatgridJsonLoader.loader
-  name: loader
-  href: api/Cubusky.Heatgrids.HeatgridJsonLoader.html#Cubusky_Heatgrids_HeatgridJsonLoader_loader
-  commentId: P:Cubusky.Heatgrids.HeatgridJsonLoader.loader
-  fullName: Cubusky.Heatgrids.HeatgridJsonLoader.loader
-  nameWithType: HeatgridJsonLoader.loader
-- uid: Cubusky.Heatgrids.HeatgridJsonLoader.loader*
-  name: loader
-  href: api/Cubusky.Heatgrids.HeatgridJsonLoader.html#Cubusky_Heatgrids_HeatgridJsonLoader_loader_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridJsonLoader.loader
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridJsonLoader.loader
-  nameWithType: HeatgridJsonLoader.loader
-- uid: Cubusky.Heatgrids.HeatgridJsonRecorder
-  name: HeatgridJsonRecorder
-  href: api/Cubusky.Heatgrids.HeatgridJsonRecorder.html
-  commentId: T:Cubusky.Heatgrids.HeatgridJsonRecorder
-  fullName: Cubusky.Heatgrids.HeatgridJsonRecorder
-  nameWithType: HeatgridJsonRecorder
-- uid: Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid
-  name: heatgrid
-  href: api/Cubusky.Heatgrids.HeatgridJsonRecorder.html#Cubusky_Heatgrids_HeatgridJsonRecorder_heatgrid
-  commentId: P:Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid
-  fullName: Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid
-  nameWithType: HeatgridJsonRecorder.heatgrid
-- uid: Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid*
-  name: heatgrid
-  href: api/Cubusky.Heatgrids.HeatgridJsonRecorder.html#Cubusky_Heatgrids_HeatgridJsonRecorder_heatgrid_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridJsonRecorder.heatgrid
-  nameWithType: HeatgridJsonRecorder.heatgrid
-- uid: Cubusky.Heatgrids.HeatgridJsonRecorder.saver
-  name: saver
-  href: api/Cubusky.Heatgrids.HeatgridJsonRecorder.html#Cubusky_Heatgrids_HeatgridJsonRecorder_saver
-  commentId: P:Cubusky.Heatgrids.HeatgridJsonRecorder.saver
-  fullName: Cubusky.Heatgrids.HeatgridJsonRecorder.saver
-  nameWithType: HeatgridJsonRecorder.saver
-- uid: Cubusky.Heatgrids.HeatgridJsonRecorder.saver*
-  name: saver
-  href: api/Cubusky.Heatgrids.HeatgridJsonRecorder.html#Cubusky_Heatgrids_HeatgridJsonRecorder_saver_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridJsonRecorder.saver
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridJsonRecorder.saver
-  nameWithType: HeatgridJsonRecorder.saver
 - uid: Cubusky.Heatgrids.HeatgridLoader
   name: HeatgridLoader
   href: api/Cubusky.Heatgrids.HeatgridLoader.html
@@ -326,19 +269,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize
   nameWithType: IHeatgridVisualizer.Visualize
-- uid: Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient
-  name: stepGradient
-  href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html#Cubusky_Heatgrids_IHeatgridVisualizer_stepGradient
-  commentId: P:Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient
-  fullName: Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient
-  nameWithType: IHeatgridVisualizer.stepGradient
-- uid: Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient*
-  name: stepGradient
-  href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html#Cubusky_Heatgrids_IHeatgridVisualizer_stepGradient_
-  commentId: Overload:Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.IHeatgridVisualizer.stepGradient
-  nameWithType: IHeatgridVisualizer.stepGradient
 - uid: Cubusky.Heatgrids.JsonDirectoryLoader
   name: JsonDirectoryLoader
   href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html
@@ -498,6 +428,19 @@ references:
   commentId: T:Cubusky.Heatgrids.ParticleSystemVisualizer
   fullName: Cubusky.Heatgrids.ParticleSystemVisualizer
   nameWithType: ParticleSystemVisualizer
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+  name: heatgrid
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid
+  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+  nameWithType: ParticleSystemVisualizer.heatgrid
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid*
+  name: heatgrid
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+  nameWithType: ParticleSystemVisualizer.heatgrid
 - uid: Cubusky.Heatgrids.ParticleSystemVisualizer.particleSystem
   name: particleSystem
   href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_particleSystem

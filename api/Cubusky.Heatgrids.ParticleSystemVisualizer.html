@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class ParticleSystemVisualizer
- | Heatgrids | 0.1.0-exp </title>
+ | Heatgrids | 0.2.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ParticleSystemVisualizer
- | Heatgrids | 0.1.0-exp ">
+ | Heatgrids | 0.2.0-exp ">
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -91,7 +91,7 @@
 
   <h1 id="Cubusky_Heatgrids_ParticleSystemVisualizer" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer" class="text-break">
     Class ParticleSystemVisualizer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +103,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParticleSystemVisualizer : MonoBehaviour, IHeatgridVisualizer, ISerializationCallbackReceiver</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParticleSystemVisualizer : MonoBehaviour, IHeatgrid, IHeatgridVisualizer, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -120,6 +120,7 @@
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></div>
       <div><a class="xref" href="Cubusky.Heatgrids.IHeatgridVisualizer.html">IHeatgridVisualizer</a></div>
       <div><span class="xref">ISerializationCallbackReceiver</span></div>
     </dd>
@@ -136,11 +137,42 @@
 </h2>
 
 
+  <a id="Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid_" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid*"></a>
+
+  <h3 id="Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid">
+  heatgrid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IHeatgrid heatgrid { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Cubusky_Heatgrids_ParticleSystemVisualizer_particleSystem_" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.particleSystem*"></a>
 
   <h3 id="Cubusky_Heatgrids_ParticleSystemVisualizer_particleSystem" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.particleSystem">
   particleSystem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -171,7 +203,7 @@
 
   <h3 id="Cubusky_Heatgrids_ParticleSystemVisualizer_sizeMultiplier" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.sizeMultiplier">
   sizeMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -202,7 +234,7 @@
 
   <h3 id="Cubusky_Heatgrids_ParticleSystemVisualizer_stepGradient" data-uid="Cubusky.Heatgrids.ParticleSystemVisualizer.stepGradient">
   stepGradient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/ParticleSystemVisualizer.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

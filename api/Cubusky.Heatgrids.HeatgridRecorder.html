@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class HeatgridRecorder
- | Heatgrids | 0.1.0-exp </title>
+ | Heatgrids | 0.2.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class HeatgridRecorder
- | Heatgrids | 0.1.0-exp ">
+ | Heatgrids | 0.2.0-exp ">
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -103,7 +103,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver</code></pre>
+    <pre><code class="lang-csharp hljs">public class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver</code></pre>
   </div>
 
 
@@ -125,12 +125,6 @@
     </dd>
   </dl>
 
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="Cubusky.Heatgrids.HeatgridJsonRecorder.html">HeatgridJsonRecorder</a></div>
-    </dd>
-  </dl>
 
 
 
@@ -153,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IHeatgrid heatgrid { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IHeatgrid heatgrid { get; set; }</code></pre>
   </div>
 
 
@@ -246,7 +240,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IHeatgridSaver saver { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IHeatgridSaver saver { get; set; }</code></pre>
   </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Visualization | Heatgrids | 0.1.0-exp </title>
+      <title>Visualization | Heatgrids | 0.2.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Visualization | Heatgrids | 0.1.0-exp ">
+      <meta name="title" content="Visualization | Heatgrids | 0.2.0-exp ">
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -86,11 +86,15 @@
         <article data-uid="">
 <h1 id="visualization">Visualization</h1>
 
-<p>Heatgrids can be visualized through the <code>HeatgridDrawer</code> component, which takes visualizer and a heatgrid. Simply add a <code>HeatgridDrawer</code> to your scene and connect a <code>IHeatgrid</code> and a <code>IHeatgridVisualizer</code>. Then, right click the <code>HeatgridDrawer</code> header to access its context menu and select <code>SetAverage80</code>, then <code>Draw</code> to draw your heatmap.</p>
-<p><img src="images/Heatgrid%20Drawer%20Draw.png" alt=""></p>
 <p>Visualizers can be custom implemented through the <code>IHeatgridVisualizer</code> interface.</p>
 <h2 id="particle-solution">Particle Solution</h2>
-<p>Heatgrids comes builtin with a particle solution for visualizing heatgrids. Simply add a <code>ParticleSystemVisualizer</code> to your scene and connect it to a <code>HeatgridDrawer</code>. You can play with the <code>ParticleSystemVisualizer</code> settings at runtime to hone in on the data you are particularly interested in.</p>
+<p>Heatgrids comes builtin with a particle solution for visualizing heatgrids. Simply add a <code>ParticleSystemVisualizer</code> to your scene and select an <code>IHeatgrid</code> to visualize. You can play with the <code>ParticleSystemVisualizer</code> settings at runtime to hone in on the data you are particularly interested in.</p>
+<p>The <a href="https://docs.unity3d.com/Manual/UsingComponents.html">context menu</a> (see &quot;Component context menu commands&quot;) provides very simple methods to setup your <code>ParticleSystem</code>.</p>
+<ul>
+<li><code>SetAverageSteps</code> will set the min- and max steps to a reasonable range.</li>
+<li><code>SetMaxParticles</code> will set the maximum particles needed to visualize the heatgrid.</li>
+<li><code>Visualize</code> will visualize the heatgrid.</li>
+</ul>
 
 </article>
 

@@ -25,36 +25,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.HeatgridDrawer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridJsonLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.HeatgridJsonLoader.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridJsonRecorder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.HeatgridJsonRecorder.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Cubusky.Heatgrids.HeatgridLoader.yml",
       "output": {
         ".html": {
