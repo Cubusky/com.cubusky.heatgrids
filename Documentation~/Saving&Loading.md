@@ -13,10 +13,7 @@ With the `JsonDirectoryLoader` inside your `HeatgridLoader` selected, heatgrids 
 Derive from `IHeatgridSaver` to implement a custom heatgrid saving solution, and derive from `IHeatgridLoader` to implement a custom heatgrid loading solution.
 
 ```csharp
-[Serializable]
 public class XmlFileSaver : IHeatgridSaver { ... }
-
-[Serializable]
 public class XmlDirectoryLoader : IHeatgridLoader { ... }
 ```
 
