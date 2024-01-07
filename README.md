@@ -6,7 +6,7 @@ To install this package, follow the instructions on the [Package Manager documen
 ```json
 {
   "dependencies": {
-    "com.cubusky.core": "https://github.com/Cubusky/com.cubusky.core.git"
+    "com.cubusky.core": "https://github.com/Cubusky/com.cubusky.core.git#1.1.0"
   }
 }
 ```
@@ -16,5 +16,5 @@ This version of Heatgrids is compatible with the following versions of the Unity
 - 2022.3 and later (recommended)
 
 ## Known Limitations
-Heatgrids `0.1.0-exp` includes the following known limitations:
+Heatgrids `0.2.0-exp` includes the following known limitations:
 - No currently known limitations.
