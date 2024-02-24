@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class HeatgridLoader
- | Heatgrids | 0.2.0-exp </title>
+      <title>Class HeatgridLoader | Heatgrids | 0.3.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class HeatgridLoader
- | Heatgrids | 0.2.0-exp ">
+      <meta name="title" content="Class HeatgridLoader | Heatgrids | 0.3.0-exp ">
+      
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -90,8 +89,7 @@
 
 
   <h1 id="Cubusky_Heatgrids_HeatgridLoader" data-uid="Cubusky.Heatgrids.HeatgridLoader" class="text-break">
-    Class HeatgridLoader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class HeatgridLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +101,8 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeatgridLoader merges grids into one single grid, which is a fundamentally incorrect implementation. This MonoBehaviour will therefor be removed in a later version in favor of letting Visualizers load heatgrids for themselves.&quot;, false)]
+public class HeatgridLoader : MonoBehaviour, IHeatgrid</code></pre>
   </div>
 
 
@@ -121,7 +120,6 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></div>
-      <div><a class="xref" href="Cubusky.Heatgrids.IHeatgridLoader.html">IHeatgridLoader</a></div>
     </dd>
   </dl>
 
@@ -140,14 +138,14 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridLoader_loader" data-uid="Cubusky.Heatgrids.HeatgridLoader.loader">
   loader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IHeatgridLoader loader { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerableLoader loader { get; set; }</code></pre>
   </div>
 
 
@@ -156,7 +154,7 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Cubusky.Heatgrids.IHeatgridLoader.html">IHeatgridLoader</a></dt>
+    <dt><span class="xref">IEnumerableLoader</span></dt>
     <dd></dd>
   </dl>
 
@@ -175,7 +173,7 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridLoader_EmptyCache" data-uid="Cubusky.Heatgrids.HeatgridLoader.EmptyCache">
   EmptyCache()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

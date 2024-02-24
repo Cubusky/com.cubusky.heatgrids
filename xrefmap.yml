@@ -129,28 +129,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.HeatgridRecorder.saver
   nameWithType: HeatgridRecorder.saver
-- uid: Cubusky.Heatgrids.HeatgridUtility
-  name: HeatgridUtility
-  href: api/Cubusky.Heatgrids.HeatgridUtility.html
-  commentId: T:Cubusky.Heatgrids.HeatgridUtility
-  fullName: Cubusky.Heatgrids.HeatgridUtility
-  nameWithType: HeatgridUtility
-- uid: Cubusky.Heatgrids.HeatgridUtility.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
-  name: MergeGrids(params Dictionary<Vector3Int, int>[])
-  href: api/Cubusky.Heatgrids.HeatgridUtility.html#Cubusky_Heatgrids_HeatgridUtility_MergeGrids_System_Collections_Generic_Dictionary_Vector3Int_System_Int32____
-  commentId: M:Cubusky.Heatgrids.HeatgridUtility.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
-  name.vb: MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
-  fullName: Cubusky.Heatgrids.HeatgridUtility.MergeGrids(params System.Collections.Generic.Dictionary<Vector3Int, int>[])
-  fullName.vb: Cubusky.Heatgrids.HeatgridUtility.MergeGrids(ParamArray System.Collections.Generic.Dictionary(Of Vector3Int, Integer)())
-  nameWithType: HeatgridUtility.MergeGrids(params Dictionary<Vector3Int, int>[])
-  nameWithType.vb: HeatgridUtility.MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
-- uid: Cubusky.Heatgrids.HeatgridUtility.MergeGrids*
-  name: MergeGrids
-  href: api/Cubusky.Heatgrids.HeatgridUtility.html#Cubusky_Heatgrids_HeatgridUtility_MergeGrids_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridUtility.MergeGrids
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridUtility.MergeGrids
-  nameWithType: HeatgridUtility.MergeGrids
 - uid: Cubusky.Heatgrids.IHeatgrid
   name: IHeatgrid
   href: api/Cubusky.Heatgrids.IHeatgrid.html
@@ -170,6 +148,22 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgrid.GridToWorld
   nameWithType: IHeatgrid.GridToWorld
+- uid: Cubusky.Heatgrids.IHeatgrid.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
+  name: MergeGrids(params Dictionary<Vector3Int, int>[])
+  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_MergeGrids_System_Collections_Generic_Dictionary_Vector3Int_System_Int32____
+  commentId: M:Cubusky.Heatgrids.IHeatgrid.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
+  name.vb: MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
+  fullName: Cubusky.Heatgrids.IHeatgrid.MergeGrids(params System.Collections.Generic.Dictionary<Vector3Int, int>[])
+  fullName.vb: Cubusky.Heatgrids.IHeatgrid.MergeGrids(ParamArray System.Collections.Generic.Dictionary(Of Vector3Int, Integer)())
+  nameWithType: IHeatgrid.MergeGrids(params Dictionary<Vector3Int, int>[])
+  nameWithType.vb: IHeatgrid.MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
+- uid: Cubusky.Heatgrids.IHeatgrid.MergeGrids*
+  name: MergeGrids
+  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_MergeGrids_
+  commentId: Overload:Cubusky.Heatgrids.IHeatgrid.MergeGrids
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.IHeatgrid.MergeGrids
+  nameWithType: IHeatgrid.MergeGrids
 - uid: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3)
   name: WorldToGrid(Vector3)
   href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_WorldToGrid_Vector3_
@@ -209,47 +203,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgrid.grid
   nameWithType: IHeatgrid.grid
-- uid: Cubusky.Heatgrids.IHeatgridLoader
-  name: IHeatgridLoader
-  href: api/Cubusky.Heatgrids.IHeatgridLoader.html
-  commentId: T:Cubusky.Heatgrids.IHeatgridLoader
-  fullName: Cubusky.Heatgrids.IHeatgridLoader
-  nameWithType: IHeatgridLoader
-- uid: Cubusky.Heatgrids.IHeatgridLoader.Load(System.Single@)
-  name: Load(out float)
-  href: api/Cubusky.Heatgrids.IHeatgridLoader.html#Cubusky_Heatgrids_IHeatgridLoader_Load_System_Single__
-  commentId: M:Cubusky.Heatgrids.IHeatgridLoader.Load(System.Single@)
-  name.vb: Load(Single)
-  fullName: Cubusky.Heatgrids.IHeatgridLoader.Load(out float)
-  fullName.vb: Cubusky.Heatgrids.IHeatgridLoader.Load(Single)
-  nameWithType: IHeatgridLoader.Load(out float)
-  nameWithType.vb: IHeatgridLoader.Load(Single)
-- uid: Cubusky.Heatgrids.IHeatgridLoader.Load*
-  name: Load
-  href: api/Cubusky.Heatgrids.IHeatgridLoader.html#Cubusky_Heatgrids_IHeatgridLoader_Load_
-  commentId: Overload:Cubusky.Heatgrids.IHeatgridLoader.Load
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.IHeatgridLoader.Load
-  nameWithType: IHeatgridLoader.Load
-- uid: Cubusky.Heatgrids.IHeatgridSaver
-  name: IHeatgridSaver
-  href: api/Cubusky.Heatgrids.IHeatgridSaver.html
-  commentId: T:Cubusky.Heatgrids.IHeatgridSaver
-  fullName: Cubusky.Heatgrids.IHeatgridSaver
-  nameWithType: IHeatgridSaver
-- uid: Cubusky.Heatgrids.IHeatgridSaver.Save(Cubusky.Heatgrids.IHeatgrid)
-  name: Save(IHeatgrid)
-  href: api/Cubusky.Heatgrids.IHeatgridSaver.html#Cubusky_Heatgrids_IHeatgridSaver_Save_Cubusky_Heatgrids_IHeatgrid_
-  commentId: M:Cubusky.Heatgrids.IHeatgridSaver.Save(Cubusky.Heatgrids.IHeatgrid)
-  fullName: Cubusky.Heatgrids.IHeatgridSaver.Save(Cubusky.Heatgrids.IHeatgrid)
-  nameWithType: IHeatgridSaver.Save(IHeatgrid)
-- uid: Cubusky.Heatgrids.IHeatgridSaver.Save*
-  name: Save
-  href: api/Cubusky.Heatgrids.IHeatgridSaver.html#Cubusky_Heatgrids_IHeatgridSaver_Save_
-  commentId: Overload:Cubusky.Heatgrids.IHeatgridSaver.Save
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.IHeatgridSaver.Save
-  nameWithType: IHeatgridSaver.Save
 - uid: Cubusky.Heatgrids.IHeatgridVisualizer
   name: IHeatgridVisualizer
   href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html
@@ -269,83 +222,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize
   nameWithType: IHeatgridVisualizer.Visualize
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader
-  name: JsonDirectoryLoader
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html
-  commentId: T:Cubusky.Heatgrids.JsonDirectoryLoader
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader
-  nameWithType: JsonDirectoryLoader
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.directory
-  name: directory
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_directory
-  commentId: P:Cubusky.Heatgrids.JsonDirectoryLoader.directory
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.directory
-  nameWithType: JsonDirectoryLoader.directory
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.directory*
-  name: directory
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_directory_
-  commentId: Overload:Cubusky.Heatgrids.JsonDirectoryLoader.directory
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.directory
-  nameWithType: JsonDirectoryLoader.directory
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory
-  name: fileDirectory
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_fileDirectory
-  commentId: P:Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory
-  nameWithType: JsonDirectoryLoader.fileDirectory
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory*
-  name: fileDirectory
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_fileDirectory_
-  commentId: Overload:Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.fileDirectory
-  nameWithType: JsonDirectoryLoader.fileDirectory
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.searchOption
-  name: searchOption
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_searchOption
-  commentId: P:Cubusky.Heatgrids.JsonDirectoryLoader.searchOption
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.searchOption
-  nameWithType: JsonDirectoryLoader.searchOption
-- uid: Cubusky.Heatgrids.JsonDirectoryLoader.searchOption*
-  name: searchOption
-  href: api/Cubusky.Heatgrids.JsonDirectoryLoader.html#Cubusky_Heatgrids_JsonDirectoryLoader_searchOption_
-  commentId: Overload:Cubusky.Heatgrids.JsonDirectoryLoader.searchOption
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonDirectoryLoader.searchOption
-  nameWithType: JsonDirectoryLoader.searchOption
-- uid: Cubusky.Heatgrids.JsonFileSaver
-  name: JsonFileSaver
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html
-  commentId: T:Cubusky.Heatgrids.JsonFileSaver
-  fullName: Cubusky.Heatgrids.JsonFileSaver
-  nameWithType: JsonFileSaver
-- uid: Cubusky.Heatgrids.JsonFileSaver.directory
-  name: directory
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directory
-  commentId: P:Cubusky.Heatgrids.JsonFileSaver.directory
-  fullName: Cubusky.Heatgrids.JsonFileSaver.directory
-  nameWithType: JsonFileSaver.directory
-- uid: Cubusky.Heatgrids.JsonFileSaver.directory*
-  name: directory
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directory_
-  commentId: Overload:Cubusky.Heatgrids.JsonFileSaver.directory
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonFileSaver.directory
-  nameWithType: JsonFileSaver.directory
-- uid: Cubusky.Heatgrids.JsonFileSaver.directoryPath
-  name: directoryPath
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directoryPath
-  commentId: P:Cubusky.Heatgrids.JsonFileSaver.directoryPath
-  fullName: Cubusky.Heatgrids.JsonFileSaver.directoryPath
-  nameWithType: JsonFileSaver.directoryPath
-- uid: Cubusky.Heatgrids.JsonFileSaver.directoryPath*
-  name: directoryPath
-  href: api/Cubusky.Heatgrids.JsonFileSaver.html#Cubusky_Heatgrids_JsonFileSaver_directoryPath_
-  commentId: Overload:Cubusky.Heatgrids.JsonFileSaver.directoryPath
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.JsonFileSaver.directoryPath
-  nameWithType: JsonFileSaver.directoryPath
 - uid: Cubusky.Heatgrids.JsonHeatgrid
   name: JsonHeatgrid
   href: api/Cubusky.Heatgrids.JsonHeatgrid.html

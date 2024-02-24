@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class HeatgridRecorder
- | Heatgrids | 0.2.0-exp </title>
+      <title>Class HeatgridRecorder | Heatgrids | 0.3.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class HeatgridRecorder
- | Heatgrids | 0.2.0-exp ">
+      <meta name="title" content="Class HeatgridRecorder | Heatgrids | 0.3.0-exp ">
+      
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -90,8 +89,7 @@
 
 
   <h1 id="Cubusky_Heatgrids_HeatgridRecorder" data-uid="Cubusky.Heatgrids.HeatgridRecorder" class="text-break">
-    Class HeatgridRecorder
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class HeatgridRecorder  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver</code></pre>
+    <pre><code class="lang-csharp hljs">public class HeatgridRecorder : MonoBehaviour, IHeatgrid, ISerializationCallbackReceiver</code></pre>
   </div>
 
 
@@ -121,7 +119,7 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></div>
-      <div><a class="xref" href="Cubusky.Heatgrids.IHeatgridSaver.html">IHeatgridSaver</a></div>
+      <div><span class="xref">ISerializationCallbackReceiver</span></div>
     </dd>
   </dl>
 
@@ -140,7 +138,7 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridRecorder_heatgrid" data-uid="Cubusky.Heatgrids.HeatgridRecorder.heatgrid">
   heatgrid
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -171,14 +169,14 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridRecorder_minimumRecordingTime" data-uid="Cubusky.Heatgrids.HeatgridRecorder.minimumRecordingTime">
   minimumRecordingTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float minimumRecordingTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TimeSpan minimumRecordingTime { get; set; }</code></pre>
   </div>
 
 
@@ -187,7 +185,7 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
     <dd></dd>
   </dl>
 
@@ -202,7 +200,7 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridRecorder_recordingTime" data-uid="Cubusky.Heatgrids.HeatgridRecorder.recordingTime">
   recordingTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -233,14 +231,14 @@
 
   <h3 id="Cubusky_Heatgrids_HeatgridRecorder_saver" data-uid="Cubusky.Heatgrids.HeatgridRecorder.saver">
   saver
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IHeatgridSaver saver { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ISaver saver { get; set; }</code></pre>
   </div>
 
 
@@ -249,7 +247,7 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Cubusky.Heatgrids.IHeatgridSaver.html">IHeatgridSaver</a></dt>
+    <dt><span class="xref">ISaver</span></dt>
     <dd></dd>
   </dl>
 

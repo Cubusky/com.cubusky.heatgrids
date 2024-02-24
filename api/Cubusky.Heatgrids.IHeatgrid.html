@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IHeatgrid
- | Heatgrids | 0.2.0-exp </title>
+      <title>Interface IHeatgrid | Heatgrids | 0.3.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IHeatgrid
- | Heatgrids | 0.2.0-exp ">
+      <meta name="title" content="Interface IHeatgrid | Heatgrids | 0.3.0-exp ">
+      
       
       <link rel="icon" href="../manual/images/favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -90,8 +89,7 @@
 
 
   <h1 id="Cubusky_Heatgrids_IHeatgrid" data-uid="Cubusky.Heatgrids.IHeatgrid" class="text-break">
-    Interface IHeatgrid
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid/Heatgrid.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Interface IHeatgrid  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -126,7 +124,7 @@
 
   <h3 id="Cubusky_Heatgrids_IHeatgrid_cellSize" data-uid="Cubusky.Heatgrids.IHeatgrid.cellSize">
   cellSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid/Heatgrid.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -157,7 +155,7 @@
 
   <h3 id="Cubusky_Heatgrids_IHeatgrid_grid" data-uid="Cubusky.Heatgrids.IHeatgrid.grid">
   grid
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid/Heatgrid.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -192,7 +190,7 @@
 
   <h3 id="Cubusky_Heatgrids_IHeatgrid_GridToWorld_Vector3Int_" data-uid="Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int)">
   GridToWorld(Vector3Int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid/Heatgrid.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -224,11 +222,48 @@
 
 
 
+  <a id="Cubusky_Heatgrids_IHeatgrid_MergeGrids_" data-uid="Cubusky.Heatgrids.IHeatgrid.MergeGrids*"></a>
+
+  <h3 id="Cubusky_Heatgrids_IHeatgrid_MergeGrids_System_Collections_Generic_Dictionary_Vector3Int_System_Int32____" data-uid="Cubusky.Heatgrids.IHeatgrid.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])">
+  MergeGrids(params Dictionary&lt;Vector3Int, int&gt;[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should not be able to merge grids like this. Instead, you should loop through all grids individually.&quot;, false)]
+public static Dictionary&lt;Vector3Int, int&gt; MergeGrids(params Dictionary&lt;Vector3Int, int&gt;[] grids)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grids</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Vector3Int</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Vector3Int</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Cubusky_Heatgrids_IHeatgrid_WorldToGrid_" data-uid="Cubusky.Heatgrids.IHeatgrid.WorldToGrid*"></a>
 
   <h3 id="Cubusky_Heatgrids_IHeatgrid_WorldToGrid_Vector3_" data-uid="Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3)">
   WorldToGrid(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid/Heatgrid.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Heatgrid.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
