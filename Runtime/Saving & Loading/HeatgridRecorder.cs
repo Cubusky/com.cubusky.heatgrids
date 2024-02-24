@@ -1,36 +1,23 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Cubusky.Heatgrids
 {
-    public interface IHeatgridSaver
+    public class HeatgridRecorder : MonoBehaviour, IHeatgrid, ISerializationCallbackReceiver
     {
-        void Save(IHeatgrid heatgrid);
-    }
-
-    public class HeatgridRecorder : MonoBehaviour, IHeatgrid, IHeatgridSaver
-    {
-        [field: SerializeField, Min(0f)] public float minimumRecordingTime { get; set; } = 10f;
-
-        private float _recordingTime;
-        public float recordingTime
-        {
-            get => _recordingTime;
-            private set => _recordingTime = value;
-        }
-
+        [SerializeField, TimeSpan] private long _minimumRecordingTime = TimeSpan.TicksPerSecond * 10;
         [field: SerializeReference, ReferenceDropdown] public IHeatgrid heatgrid { get; set; }
-        [field: SerializeReference, ReferenceDropdown] public IHeatgridSaver saver { get; set; }
+        [field: SerializeReference, ReferenceDropdown] public ISaver saver { get; set; }
 
         Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
         float IHeatgrid.cellSize => heatgrid.cellSize;
 
-        void IHeatgridSaver.Save(IHeatgrid heatgrid) => saver.Save(heatgrid);
+        public TimeSpan minimumRecordingTime { get; set; }
+        public float recordingTime { get; private set; }
 
-        private void Start()
-        {
-            recordingTime = 0f;
-        }
+        void ISerializationCallbackReceiver.OnBeforeSerialize() => _minimumRecordingTime = minimumRecordingTime.Ticks;
+        void ISerializationCallbackReceiver.OnAfterDeserialize() => minimumRecordingTime = new(_minimumRecordingTime);
 
         private void FixedUpdate()
         {
@@ -44,9 +31,10 @@ namespace Cubusky.Heatgrids
 
         private void OnDestroy()
         {
-            if (recordingTime >= minimumRecordingTime + float.Epsilon)
+            if (recordingTime > minimumRecordingTime.TotalSeconds)
             {
-                saver.Save(heatgrid);
+                var json = JsonHeatgrid.ToJson(heatgrid);
+                saver.SaveAsync(json);
             }
         }
     }
