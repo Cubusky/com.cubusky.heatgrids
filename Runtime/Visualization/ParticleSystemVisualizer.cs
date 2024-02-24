@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 using Object = UnityEngine.Object;
 
 namespace Cubusky.Heatgrids
@@ -21,35 +20,6 @@ namespace Cubusky.Heatgrids
 
         Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
         float IHeatgrid.cellSize => heatgrid.cellSize;
-
-        #region Serialization & Initialization
-        void ISerializationCallbackReceiver.OnBeforeSerialize()
-        {
-            _heatgrid = heatgrid as Object;
-            try
-            {
-                UpdateParticleSystem();
-            }
-            catch (NullReferenceException) { }
-        }
-
-        void ISerializationCallbackReceiver.OnAfterDeserialize() => heatgrid = _heatgrid as IHeatgrid;
-
-        private void UpdateParticleSystem()
-        {
-            var colorBySpeed = particleSystem.colorBySpeed;
-            var colorBySpeedColor = colorBySpeed.color;
-            colorBySpeedColor.gradient = stepGradient.gradient;
-            colorBySpeed.color = colorBySpeedColor;
-
-            var sizeBySpeed = particleSystem.sizeBySpeed;
-            colorBySpeed.range = sizeBySpeed.range = new Vector2(stepGradient.minSteps, stepGradient.maxSteps);
-
-            var sizeOverLifetime = particleSystem.sizeOverLifetime;
-            sizeOverLifetime.sizeMultiplier = sizeMultiplier;
-
-            particleSystem.Pause();
-        }
 
         private void InitializeComponents()
         {
@@ -79,31 +49,6 @@ namespace Cubusky.Heatgrids
             particleSystemRenderer.allowRoll = false;
             particleSystemRenderer.alignment = ParticleSystemRenderSpace.Facing;
         }
-        #endregion
-
-        #region Context Methods
-        [ContextMenu(nameof(SetAverageSteps))]
-        private void SetAverageSteps()
-        {
-            var average = heatgrid.grid.Values.Average();
-            stepGradient.minSteps = (int)Math.Ceiling(average * 0.2);
-            stepGradient.maxSteps = (int)Math.Ceiling(average * 1.8);
-        }
-
-        [ContextMenu(nameof(SetMaxParticles))]
-        private void SetMaxParticles()
-        {
-            var main = particleSystem.main;
-            main.maxParticles = Mathf.Max(main.maxParticles, heatgrid.grid.Count);
-            Debug.LogWarning($"Max Particles have been set. Note that a large amount of particles may impact editor performance.");
-        }
-
-        [ContextMenu(nameof(Visualize))]
-        private void Visualize() => visualizer.Visualize(this);
-
-        [ContextMenu(nameof(Stop))]
-        private void Stop() => particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        #endregion
 
         private void Reset()
         {
@@ -132,7 +77,7 @@ namespace Cubusky.Heatgrids
                 return;
             }
 
-            var particles = new Particle[heatgrid.grid.Count];
+            var particles = new ParticleSystem.Particle[heatgrid.grid.Count];
             int particleIndex = 0;
 
             foreach (var cell in heatgrid.grid)
@@ -159,5 +104,59 @@ namespace Cubusky.Heatgrids
             particleSystem.SetParticles(particles);
             particleSystem.Pause();
         }
+
+        #region Serialization & Initialization
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            _heatgrid = heatgrid as Object;
+            try
+            {
+                UpdateParticleSystem();
+            }
+            catch (NullReferenceException) { }
+        }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize() => heatgrid = _heatgrid as IHeatgrid;
+
+        private void UpdateParticleSystem()
+        {
+            var colorBySpeed = particleSystem.colorBySpeed;
+            var colorBySpeedColor = colorBySpeed.color;
+            colorBySpeedColor.gradient = stepGradient.gradient;
+            colorBySpeed.color = colorBySpeedColor;
+
+            var sizeBySpeed = particleSystem.sizeBySpeed;
+            colorBySpeed.range = sizeBySpeed.range = new Vector2(stepGradient.minSteps, stepGradient.maxSteps);
+
+            var sizeOverLifetime = particleSystem.sizeOverLifetime;
+            sizeOverLifetime.sizeMultiplier = sizeMultiplier;
+
+            particleSystem.Pause();
+        }
+        #endregion
+
+        #region Context Methods
+        [ContextMenu(nameof(SetAverageSteps))]
+        private void SetAverageSteps()
+        {
+            var average = heatgrid.grid.Values.Average();
+            stepGradient.minSteps = (int)Math.Ceiling(average * 0.2);
+            stepGradient.maxSteps = (int)Math.Ceiling(average * 1.8);
+        }
+
+        [ContextMenu(nameof(SetMaxParticles))]
+        private void SetMaxParticles()
+        {
+            var main = particleSystem.main;
+            main.maxParticles = Mathf.Max(main.maxParticles, heatgrid.grid.Count);
+            Debug.LogWarning($"Max Particles have been set. Note that a large amount of particles may impact editor performance.");
+        }
+
+        [ContextMenu(nameof(Visualize))]
+        private void Visualize() => visualizer.Visualize(heatgrid);
+
+        [ContextMenu(nameof(Stop))]
+        private void Stop() => particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        #endregion
     }
 }
