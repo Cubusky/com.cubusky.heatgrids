@@ -1,18 +1,14 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Cubusky.Heatgrids
 {
-    public interface IHeatgridLoader
-    {
-        Dictionary<Vector3Int, int> Load(out float cellSize);
-    }
-
-    public class HeatgridLoader : MonoBehaviour, IHeatgrid, IHeatgridLoader
+    [Obsolete("HeatgridLoader merges grids into one single grid, which is a fundamentally incorrect implementation. This MonoBehaviour will therefor be removed in a later version in favor of letting Visualizers load heatgrids for themselves.", false)]
+    public class HeatgridLoader : MonoBehaviour, IHeatgrid
     {
         [field: SerializeReference, ReferenceDropdown] public IHeatgridLoader loader { get; set; }
-
-        Dictionary<Vector3Int, int> IHeatgridLoader.Load(out float cellSize) => loader.Load(out cellSize);
 
         private Dictionary<Vector3Int, int> cachedGrid;
         private float cachedCellSize;
