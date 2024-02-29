@@ -16,5 +16,5 @@ This version of Heatgrids is compatible with the following versions of the Unity
 - 2022.3 and later (recommended)
 
 ## Known Limitations
-Heatgrids `0.3.0-exp` includes the following known limitations:
+Heatgrids `0.4.0-exp` includes the following known limitations:
 - No currently known limitations.
