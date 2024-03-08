@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class HeatgridRecorder | Heatgrids | 0.4.0-exp </title>
+      <title>Class RangeFilter | Heatgrids | 0.4.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class HeatgridRecorder | Heatgrids | 0.4.0-exp ">
+      <meta name="title" content="Class RangeFilter | Heatgrids | 0.4.0-exp ">
       
       
       <link rel="icon" href="../manual/images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       <meta name="docfx:disablenewtab" content="true">
       
-      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.heatgrids/new/main/apiSpec/new?filename=Cubusky_Heatgrids_HeatgridRecorder.md&amp;value=---%0Auid%3A%20Cubusky.Heatgrids.HeatgridRecorder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.heatgrids/new/main/apiSpec/new?filename=Cubusky_Heatgrids_RangeFilter.md&amp;value=---%0Auid%3A%20Cubusky.Heatgrids.RangeFilter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Cubusky.Heatgrids.HeatgridRecorder">
+        <article data-uid="Cubusky.Heatgrids.RangeFilter">
 
 
 
-  <h1 id="Cubusky_Heatgrids_HeatgridRecorder" data-uid="Cubusky.Heatgrids.HeatgridRecorder" class="text-break">
-Class HeatgridRecorder  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Cubusky_Heatgrids_RangeFilter" data-uid="Cubusky.Heatgrids.RangeFilter" class="text-break">
+Class RangeFilter  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/IFilter.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,8 @@ Class HeatgridRecorder  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HeatgridRecorder : MonoBehaviour, IHeatgrid, ISerializationCallbackReceiver</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class RangeFilter : IFilter</code></pre>
   </div>
 
 
@@ -111,19 +112,43 @@ Class HeatgridRecorder  <a class="header-action link-secondary" title="View sour
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">HeatgridRecorder</span></div>
+      <div><span class="xref">RangeFilter</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></div>
-      <div><span class="xref">ISerializationCallbackReceiver</span></div>
+      <div><a class="xref" href="Cubusky.Heatgrids.IFilter.html">IFilter</a></div>
     </dd>
   </dl>
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
 
 
 
@@ -134,18 +159,18 @@ Class HeatgridRecorder  <a class="header-action link-secondary" title="View sour
 </h2>
 
 
-  <a id="Cubusky_Heatgrids_HeatgridRecorder_heatgrid_" data-uid="Cubusky.Heatgrids.HeatgridRecorder.heatgrid*"></a>
+  <a id="Cubusky_Heatgrids_RangeFilter_cellSizeRange_" data-uid="Cubusky.Heatgrids.RangeFilter.cellSizeRange*"></a>
 
-  <h3 id="Cubusky_Heatgrids_HeatgridRecorder_heatgrid" data-uid="Cubusky.Heatgrids.HeatgridRecorder.heatgrid">
-  heatgrid
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Cubusky_Heatgrids_RangeFilter_cellSizeRange" data-uid="Cubusky.Heatgrids.RangeFilter.cellSizeRange">
+  cellSizeRange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/IFilter.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IHeatgrid heatgrid { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 cellSizeRange { get; set; }</code></pre>
   </div>
 
 
@@ -154,7 +179,7 @@ Class HeatgridRecorder  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></dt>
+    <dt><span class="xref">Vector2</span></dt>
     <dd></dd>
   </dl>
 
@@ -165,91 +190,38 @@ Class HeatgridRecorder  <a class="header-action link-secondary" title="View sour
 
 
 
-  <a id="Cubusky_Heatgrids_HeatgridRecorder_minimumRecordingTime_" data-uid="Cubusky.Heatgrids.HeatgridRecorder.minimumRecordingTime*"></a>
+  <h2 class="section" id="methods">Methods
+</h2>
 
-  <h3 id="Cubusky_Heatgrids_HeatgridRecorder_minimumRecordingTime" data-uid="Cubusky.Heatgrids.HeatgridRecorder.minimumRecordingTime">
-  minimumRecordingTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L16"><i class="bi bi-code-slash"></i></a>
+
+  <a id="Cubusky_Heatgrids_RangeFilter_Include_" data-uid="Cubusky.Heatgrids.RangeFilter.Include*"></a>
+
+  <h3 id="Cubusky_Heatgrids_RangeFilter_Include_Cubusky_Heatgrids_IHeatgrid_" data-uid="Cubusky.Heatgrids.RangeFilter.Include(Cubusky.Heatgrids.IHeatgrid)">
+  Include(IHeatgrid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/IFilter.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan minimumRecordingTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Include(IHeatgrid heatgrid)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dt><code>heatgrid</code> <a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
 
 
-
-
-
-
-
-  <a id="Cubusky_Heatgrids_HeatgridRecorder_recordingTime_" data-uid="Cubusky.Heatgrids.HeatgridRecorder.recordingTime*"></a>
-
-  <h3 id="Cubusky_Heatgrids_HeatgridRecorder_recordingTime" data-uid="Cubusky.Heatgrids.HeatgridRecorder.recordingTime">
-  recordingTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float recordingTime { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Cubusky_Heatgrids_HeatgridRecorder_saver_" data-uid="Cubusky.Heatgrids.HeatgridRecorder.saver*"></a>
-
-  <h3 id="Cubusky_Heatgrids_HeatgridRecorder_saver" data-uid="Cubusky.Heatgrids.HeatgridRecorder.saver">
-  saver
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridRecorder.cs/#L11"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ISaver saver { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">ISaver</span></dt>
-    <dd></dd>
-  </dl>
 
 
 

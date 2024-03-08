@@ -25,20 +25,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridLoader.yml",
+      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.HeatgridLoader.html"
+          "relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.yml",
+      "source_relative_path": "api/Cubusky.Heatgrids.IFilter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.HeatgridRecorder.html"
+          "relative_path": "api/Cubusky.Heatgrids.IFilter.html"
         }
       },
       "version": ""
@@ -55,10 +55,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Cubusky.Heatgrids.IHeatgridVisualizer.yml",
+      "source_relative_path": "api/Cubusky.Heatgrids.IVisualizer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Cubusky.Heatgrids.IHeatgridVisualizer.html"
+          "relative_path": "api/Cubusky.Heatgrids.IVisualizer.html"
         }
       },
       "version": ""
@@ -79,6 +79,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Cubusky.Heatgrids.ParticleSystemVisualizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.RangeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.RangeFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.Heatgrids.SizeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.Heatgrids.SizeFilter.html"
         }
       },
       "version": ""

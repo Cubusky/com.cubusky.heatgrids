@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class HeatgridLoader | Heatgrids | 0.3.0-exp </title>
+      <title>Interface IFilter | Heatgrids | 0.4.0-exp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class HeatgridLoader | Heatgrids | 0.3.0-exp ">
+      <meta name="title" content="Interface IFilter | Heatgrids | 0.4.0-exp ">
       
       
       <link rel="icon" href="../manual/images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       <meta name="docfx:disablenewtab" content="true">
       
-      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.heatgrids/new/main/apiSpec/new?filename=Cubusky_Heatgrids_HeatgridLoader.md&amp;value=---%0Auid%3A%20Cubusky.Heatgrids.HeatgridLoader%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.heatgrids/new/main/apiSpec/new?filename=Cubusky_Heatgrids_IFilter.md&amp;value=---%0Auid%3A%20Cubusky.Heatgrids.IFilter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Cubusky.Heatgrids.HeatgridLoader">
+        <article data-uid="Cubusky.Heatgrids.IFilter">
 
 
 
-  <h1 id="Cubusky_Heatgrids_HeatgridLoader" data-uid="Cubusky.Heatgrids.HeatgridLoader" class="text-break">
-Class HeatgridLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Cubusky_Heatgrids_IFilter" data-uid="Cubusky.Heatgrids.IFilter" class="text-break">
+Interface IFilter  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/IFilter.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,62 +101,13 @@ Class HeatgridLoader  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeatgridLoader merges grids into one single grid, which is a fundamentally incorrect implementation. This MonoBehaviour will therefor be removed in a later version in favor of letting Visualizers load heatgrids for themselves.&quot;, false)]
-public class HeatgridLoader : MonoBehaviour, IHeatgrid</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">HeatgridLoader</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></div>
-    </dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Cubusky_Heatgrids_HeatgridLoader_loader_" data-uid="Cubusky.Heatgrids.HeatgridLoader.loader*"></a>
-
-  <h3 id="Cubusky_Heatgrids_HeatgridLoader_loader" data-uid="Cubusky.Heatgrids.HeatgridLoader.loader">
-  loader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L11"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerableLoader loader { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IFilter</code></pre>
   </div>
 
 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">IEnumerableLoader</span></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -169,21 +120,31 @@ public class HeatgridLoader : MonoBehaviour, IHeatgrid</code></pre>
 </h2>
 
 
-  <a id="Cubusky_Heatgrids_HeatgridLoader_EmptyCache_" data-uid="Cubusky.Heatgrids.HeatgridLoader.EmptyCache*"></a>
+  <a id="Cubusky_Heatgrids_IFilter_Include_" data-uid="Cubusky.Heatgrids.IFilter.Include*"></a>
 
-  <h3 id="Cubusky_Heatgrids_HeatgridLoader_EmptyCache" data-uid="Cubusky.Heatgrids.HeatgridLoader.EmptyCache">
-  EmptyCache()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Saving &amp; Loading/HeatgridLoader.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Cubusky_Heatgrids_IFilter_Include_Cubusky_Heatgrids_IHeatgrid_" data-uid="Cubusky.Heatgrids.IFilter.Include(Cubusky.Heatgrids.IHeatgrid)">
+  Include(IHeatgrid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cubusky/com.cubusky.heatgrids/blob/main/Runtime/Visualization/IFilter.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void EmptyCache()</code></pre>
+    <pre><code class="lang-csharp hljs">bool Include(IHeatgrid heatgrid)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>heatgrid</code> <a class="xref" href="Cubusky.Heatgrids.IHeatgrid.html">IHeatgrid</a></dt>
+    <dd></dd>
+  </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

@@ -39,38 +39,6 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.Heatgrid.grid
   nameWithType: Heatgrid.grid
-- uid: Cubusky.Heatgrids.HeatgridLoader
-  name: HeatgridLoader
-  href: api/Cubusky.Heatgrids.HeatgridLoader.html
-  commentId: T:Cubusky.Heatgrids.HeatgridLoader
-  fullName: Cubusky.Heatgrids.HeatgridLoader
-  nameWithType: HeatgridLoader
-- uid: Cubusky.Heatgrids.HeatgridLoader.EmptyCache
-  name: EmptyCache()
-  href: api/Cubusky.Heatgrids.HeatgridLoader.html#Cubusky_Heatgrids_HeatgridLoader_EmptyCache
-  commentId: M:Cubusky.Heatgrids.HeatgridLoader.EmptyCache
-  fullName: Cubusky.Heatgrids.HeatgridLoader.EmptyCache()
-  nameWithType: HeatgridLoader.EmptyCache()
-- uid: Cubusky.Heatgrids.HeatgridLoader.EmptyCache*
-  name: EmptyCache
-  href: api/Cubusky.Heatgrids.HeatgridLoader.html#Cubusky_Heatgrids_HeatgridLoader_EmptyCache_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridLoader.EmptyCache
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridLoader.EmptyCache
-  nameWithType: HeatgridLoader.EmptyCache
-- uid: Cubusky.Heatgrids.HeatgridLoader.loader
-  name: loader
-  href: api/Cubusky.Heatgrids.HeatgridLoader.html#Cubusky_Heatgrids_HeatgridLoader_loader
-  commentId: P:Cubusky.Heatgrids.HeatgridLoader.loader
-  fullName: Cubusky.Heatgrids.HeatgridLoader.loader
-  nameWithType: HeatgridLoader.loader
-- uid: Cubusky.Heatgrids.HeatgridLoader.loader*
-  name: loader
-  href: api/Cubusky.Heatgrids.HeatgridLoader.html#Cubusky_Heatgrids_HeatgridLoader_loader_
-  commentId: Overload:Cubusky.Heatgrids.HeatgridLoader.loader
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.HeatgridLoader.loader
-  nameWithType: HeatgridLoader.loader
 - uid: Cubusky.Heatgrids.HeatgridRecorder
   name: HeatgridRecorder
   href: api/Cubusky.Heatgrids.HeatgridRecorder.html
@@ -129,6 +97,25 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.HeatgridRecorder.saver
   nameWithType: HeatgridRecorder.saver
+- uid: Cubusky.Heatgrids.IFilter
+  name: IFilter
+  href: api/Cubusky.Heatgrids.IFilter.html
+  commentId: T:Cubusky.Heatgrids.IFilter
+  fullName: Cubusky.Heatgrids.IFilter
+  nameWithType: IFilter
+- uid: Cubusky.Heatgrids.IFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  name: Include(IHeatgrid)
+  href: api/Cubusky.Heatgrids.IFilter.html#Cubusky_Heatgrids_IFilter_Include_Cubusky_Heatgrids_IHeatgrid_
+  commentId: M:Cubusky.Heatgrids.IFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  fullName: Cubusky.Heatgrids.IFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  nameWithType: IFilter.Include(IHeatgrid)
+- uid: Cubusky.Heatgrids.IFilter.Include*
+  name: Include
+  href: api/Cubusky.Heatgrids.IFilter.html#Cubusky_Heatgrids_IFilter_Include_
+  commentId: Overload:Cubusky.Heatgrids.IFilter.Include
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.IFilter.Include
+  nameWithType: IFilter.Include
 - uid: Cubusky.Heatgrids.IHeatgrid
   name: IHeatgrid
   href: api/Cubusky.Heatgrids.IHeatgrid.html
@@ -141,6 +128,15 @@ references:
   commentId: M:Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int)
   fullName: Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int)
   nameWithType: IHeatgrid.GridToWorld(Vector3Int)
+- uid: Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int,System.Single)
+  name: GridToWorld(Vector3Int, float)
+  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_GridToWorld_Vector3Int_System_Single_
+  commentId: M:Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int,System.Single)
+  name.vb: GridToWorld(Vector3Int, Single)
+  fullName: Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int, float)
+  fullName.vb: Cubusky.Heatgrids.IHeatgrid.GridToWorld(Vector3Int, Single)
+  nameWithType: IHeatgrid.GridToWorld(Vector3Int, float)
+  nameWithType.vb: IHeatgrid.GridToWorld(Vector3Int, Single)
 - uid: Cubusky.Heatgrids.IHeatgrid.GridToWorld*
   name: GridToWorld
   href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_GridToWorld_
@@ -148,28 +144,21 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgrid.GridToWorld
   nameWithType: IHeatgrid.GridToWorld
-- uid: Cubusky.Heatgrids.IHeatgrid.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
-  name: MergeGrids(params Dictionary<Vector3Int, int>[])
-  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_MergeGrids_System_Collections_Generic_Dictionary_Vector3Int_System_Int32____
-  commentId: M:Cubusky.Heatgrids.IHeatgrid.MergeGrids(System.Collections.Generic.Dictionary{Vector3Int,System.Int32}[])
-  name.vb: MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
-  fullName: Cubusky.Heatgrids.IHeatgrid.MergeGrids(params System.Collections.Generic.Dictionary<Vector3Int, int>[])
-  fullName.vb: Cubusky.Heatgrids.IHeatgrid.MergeGrids(ParamArray System.Collections.Generic.Dictionary(Of Vector3Int, Integer)())
-  nameWithType: IHeatgrid.MergeGrids(params Dictionary<Vector3Int, int>[])
-  nameWithType.vb: IHeatgrid.MergeGrids(ParamArray Dictionary(Of Vector3Int, Integer)())
-- uid: Cubusky.Heatgrids.IHeatgrid.MergeGrids*
-  name: MergeGrids
-  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_MergeGrids_
-  commentId: Overload:Cubusky.Heatgrids.IHeatgrid.MergeGrids
-  isSpec: "True"
-  fullName: Cubusky.Heatgrids.IHeatgrid.MergeGrids
-  nameWithType: IHeatgrid.MergeGrids
 - uid: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3)
   name: WorldToGrid(Vector3)
   href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_WorldToGrid_Vector3_
   commentId: M:Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3)
   fullName: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3)
   nameWithType: IHeatgrid.WorldToGrid(Vector3)
+- uid: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3,System.Single)
+  name: WorldToGrid(Vector3, float)
+  href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_WorldToGrid_Vector3_System_Single_
+  commentId: M:Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3,System.Single)
+  name.vb: WorldToGrid(Vector3, Single)
+  fullName: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3, float)
+  fullName.vb: Cubusky.Heatgrids.IHeatgrid.WorldToGrid(Vector3, Single)
+  nameWithType: IHeatgrid.WorldToGrid(Vector3, float)
+  nameWithType.vb: IHeatgrid.WorldToGrid(Vector3, Single)
 - uid: Cubusky.Heatgrids.IHeatgrid.WorldToGrid*
   name: WorldToGrid
   href: api/Cubusky.Heatgrids.IHeatgrid.html#Cubusky_Heatgrids_IHeatgrid_WorldToGrid_
@@ -203,25 +192,25 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.IHeatgrid.grid
   nameWithType: IHeatgrid.grid
-- uid: Cubusky.Heatgrids.IHeatgridVisualizer
-  name: IHeatgridVisualizer
-  href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html
-  commentId: T:Cubusky.Heatgrids.IHeatgridVisualizer
-  fullName: Cubusky.Heatgrids.IHeatgridVisualizer
-  nameWithType: IHeatgridVisualizer
-- uid: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize(Cubusky.Heatgrids.IHeatgrid)
-  name: Visualize(IHeatgrid)
-  href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html#Cubusky_Heatgrids_IHeatgridVisualizer_Visualize_Cubusky_Heatgrids_IHeatgrid_
-  commentId: M:Cubusky.Heatgrids.IHeatgridVisualizer.Visualize(Cubusky.Heatgrids.IHeatgrid)
-  fullName: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize(Cubusky.Heatgrids.IHeatgrid)
-  nameWithType: IHeatgridVisualizer.Visualize(IHeatgrid)
-- uid: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize*
+- uid: Cubusky.Heatgrids.IVisualizer
+  name: IVisualizer
+  href: api/Cubusky.Heatgrids.IVisualizer.html
+  commentId: T:Cubusky.Heatgrids.IVisualizer
+  fullName: Cubusky.Heatgrids.IVisualizer
+  nameWithType: IVisualizer
+- uid: Cubusky.Heatgrids.IVisualizer.Visualize
+  name: Visualize()
+  href: api/Cubusky.Heatgrids.IVisualizer.html#Cubusky_Heatgrids_IVisualizer_Visualize
+  commentId: M:Cubusky.Heatgrids.IVisualizer.Visualize
+  fullName: Cubusky.Heatgrids.IVisualizer.Visualize()
+  nameWithType: IVisualizer.Visualize()
+- uid: Cubusky.Heatgrids.IVisualizer.Visualize*
   name: Visualize
-  href: api/Cubusky.Heatgrids.IHeatgridVisualizer.html#Cubusky_Heatgrids_IHeatgridVisualizer_Visualize_
-  commentId: Overload:Cubusky.Heatgrids.IHeatgridVisualizer.Visualize
+  href: api/Cubusky.Heatgrids.IVisualizer.html#Cubusky_Heatgrids_IVisualizer_Visualize_
+  commentId: Overload:Cubusky.Heatgrids.IVisualizer.Visualize
   isSpec: "True"
-  fullName: Cubusky.Heatgrids.IHeatgridVisualizer.Visualize
-  nameWithType: IHeatgridVisualizer.Visualize
+  fullName: Cubusky.Heatgrids.IVisualizer.Visualize
+  nameWithType: IVisualizer.Visualize
 - uid: Cubusky.Heatgrids.JsonHeatgrid
   name: JsonHeatgrid
   href: api/Cubusky.Heatgrids.JsonHeatgrid.html
@@ -304,19 +293,58 @@ references:
   commentId: T:Cubusky.Heatgrids.ParticleSystemVisualizer
   fullName: Cubusky.Heatgrids.ParticleSystemVisualizer
   nameWithType: ParticleSystemVisualizer
-- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
-  name: heatgrid
-  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid
-  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
-  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
-  nameWithType: ParticleSystemVisualizer.heatgrid
-- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid*
-  name: heatgrid
-  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_heatgrid_
-  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize
+  name: Visualize()
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_Visualize
+  commentId: M:Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize()
+  nameWithType: ParticleSystemVisualizer.Visualize()
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize*
+  name: Visualize
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_Visualize_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize
   isSpec: "True"
-  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.heatgrid
-  nameWithType: ParticleSystemVisualizer.heatgrid
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize
+  nameWithType: ParticleSystemVisualizer.Visualize
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.filter
+  name: filter
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_filter
+  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.filter
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.filter
+  nameWithType: ParticleSystemVisualizer.filter
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.filter*
+  name: filter
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_filter_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.filter
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.filter
+  nameWithType: ParticleSystemVisualizer.filter
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.loader
+  name: loader
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_loader
+  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.loader
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.loader
+  nameWithType: ParticleSystemVisualizer.loader
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.loader*
+  name: loader
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_loader_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.loader
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.loader
+  nameWithType: ParticleSystemVisualizer.loader
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth
+  name: maxParticleGrowth
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_maxParticleGrowth
+  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth
+  nameWithType: ParticleSystemVisualizer.maxParticleGrowth
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth*
+  name: maxParticleGrowth
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_maxParticleGrowth_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.maxParticleGrowth
+  nameWithType: ParticleSystemVisualizer.maxParticleGrowth
 - uid: Cubusky.Heatgrids.ParticleSystemVisualizer.particleSystem
   name: particleSystem
   href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_particleSystem
@@ -356,6 +384,70 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.stepGradient
   nameWithType: ParticleSystemVisualizer.stepGradient
+- uid: Cubusky.Heatgrids.RangeFilter
+  name: RangeFilter
+  href: api/Cubusky.Heatgrids.RangeFilter.html
+  commentId: T:Cubusky.Heatgrids.RangeFilter
+  fullName: Cubusky.Heatgrids.RangeFilter
+  nameWithType: RangeFilter
+- uid: Cubusky.Heatgrids.RangeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  name: Include(IHeatgrid)
+  href: api/Cubusky.Heatgrids.RangeFilter.html#Cubusky_Heatgrids_RangeFilter_Include_Cubusky_Heatgrids_IHeatgrid_
+  commentId: M:Cubusky.Heatgrids.RangeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  fullName: Cubusky.Heatgrids.RangeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  nameWithType: RangeFilter.Include(IHeatgrid)
+- uid: Cubusky.Heatgrids.RangeFilter.Include*
+  name: Include
+  href: api/Cubusky.Heatgrids.RangeFilter.html#Cubusky_Heatgrids_RangeFilter_Include_
+  commentId: Overload:Cubusky.Heatgrids.RangeFilter.Include
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.RangeFilter.Include
+  nameWithType: RangeFilter.Include
+- uid: Cubusky.Heatgrids.RangeFilter.cellSizeRange
+  name: cellSizeRange
+  href: api/Cubusky.Heatgrids.RangeFilter.html#Cubusky_Heatgrids_RangeFilter_cellSizeRange
+  commentId: P:Cubusky.Heatgrids.RangeFilter.cellSizeRange
+  fullName: Cubusky.Heatgrids.RangeFilter.cellSizeRange
+  nameWithType: RangeFilter.cellSizeRange
+- uid: Cubusky.Heatgrids.RangeFilter.cellSizeRange*
+  name: cellSizeRange
+  href: api/Cubusky.Heatgrids.RangeFilter.html#Cubusky_Heatgrids_RangeFilter_cellSizeRange_
+  commentId: Overload:Cubusky.Heatgrids.RangeFilter.cellSizeRange
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.RangeFilter.cellSizeRange
+  nameWithType: RangeFilter.cellSizeRange
+- uid: Cubusky.Heatgrids.SizeFilter
+  name: SizeFilter
+  href: api/Cubusky.Heatgrids.SizeFilter.html
+  commentId: T:Cubusky.Heatgrids.SizeFilter
+  fullName: Cubusky.Heatgrids.SizeFilter
+  nameWithType: SizeFilter
+- uid: Cubusky.Heatgrids.SizeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  name: Include(IHeatgrid)
+  href: api/Cubusky.Heatgrids.SizeFilter.html#Cubusky_Heatgrids_SizeFilter_Include_Cubusky_Heatgrids_IHeatgrid_
+  commentId: M:Cubusky.Heatgrids.SizeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  fullName: Cubusky.Heatgrids.SizeFilter.Include(Cubusky.Heatgrids.IHeatgrid)
+  nameWithType: SizeFilter.Include(IHeatgrid)
+- uid: Cubusky.Heatgrids.SizeFilter.Include*
+  name: Include
+  href: api/Cubusky.Heatgrids.SizeFilter.html#Cubusky_Heatgrids_SizeFilter_Include_
+  commentId: Overload:Cubusky.Heatgrids.SizeFilter.Include
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.SizeFilter.Include
+  nameWithType: SizeFilter.Include
+- uid: Cubusky.Heatgrids.SizeFilter.cellSize
+  name: cellSize
+  href: api/Cubusky.Heatgrids.SizeFilter.html#Cubusky_Heatgrids_SizeFilter_cellSize
+  commentId: P:Cubusky.Heatgrids.SizeFilter.cellSize
+  fullName: Cubusky.Heatgrids.SizeFilter.cellSize
+  nameWithType: SizeFilter.cellSize
+- uid: Cubusky.Heatgrids.SizeFilter.cellSize*
+  name: cellSize
+  href: api/Cubusky.Heatgrids.SizeFilter.html#Cubusky_Heatgrids_SizeFilter_cellSize_
+  commentId: Overload:Cubusky.Heatgrids.SizeFilter.cellSize
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.SizeFilter.cellSize
+  nameWithType: SizeFilter.cellSize
 - uid: Cubusky.Heatgrids.StepGradient
   name: StepGradient
   href: api/Cubusky.Heatgrids.StepGradient.html
