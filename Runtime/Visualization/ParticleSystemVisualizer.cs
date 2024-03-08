@@ -1,25 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Cubusky.Heatgrids
 {
     [RequireComponent(typeof(ParticleSystem))]
-    public class ParticleSystemVisualizer : MonoBehaviour, IHeatgrid, IHeatgridVisualizer, ISerializationCallbackReceiver
+    public class ParticleSystemVisualizer : MonoBehaviour, ISerializationCallbackReceiver, IVisualizer
     {
         [field: SerializeField, HideInInspector] public new ParticleSystem particleSystem { get; private set; }
 
-        [SerializeField, OfType(typeof(IHeatgrid))] private Object _heatgrid;
+        [field: Header("Loading")]
+        [field: SerializeReference, ReferenceDropdown] public IEnumerableLoader loader { get; set; }
+        [field: SerializeReference, ReferenceDropdown(true)] public IFilter filter { get; set; }
+        [field: SerializeField] public int maxParticleGrowth { get; set; } = 100_000;
+
+        [field: Header("Visualization")]
         [field: SerializeField] public StepGradient stepGradient { get; set; }
         [field: SerializeField] public float sizeMultiplier { get; set; } = 2.5f;
-
-        public IHeatgrid heatgrid { get; set; }
-        private IHeatgridVisualizer visualizer => this;
-
-        Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
-        float IHeatgrid.cellSize => heatgrid.cellSize;
 
         private void InitializeComponents()
         {
@@ -56,11 +55,11 @@ namespace Cubusky.Heatgrids
 
 #if UNITY_EDITOR
             ParticleSystemRenderer renderer = GetComponent<ParticleSystemRenderer>();
+            renderer.sortingFudge = -1_000_000f;
             if (!renderer.sharedMaterial)
             {
                 const string materialName = "Default-Particle";
                 renderer.sharedMaterial = UnityEditor.AssetDatabase.GetBuiltinExtraResource<Material>($"{materialName}.mat");
-                Debug.Log($"Assigned \"{materialName}\" to the {nameof(ParticleSystem)}'s {nameof(Material)}. Note that instantiating {nameof(ParticleSystemVisualizer)}'s from script does not automatically assign a {nameof(Material)} to the {nameof(ParticleSystem)}.", this);
             }
 #endif
         }
@@ -70,36 +69,8 @@ namespace Cubusky.Heatgrids
             InitializeComponents();
         }
 
-        void IHeatgridVisualizer.Visualize(IHeatgrid heatgrid)
+        private void Visualize(ParticleSystem.Particle[] particles)
         {
-            if (heatgrid.grid.Count == 0)
-            {
-                return;
-            }
-
-            var particles = new ParticleSystem.Particle[heatgrid.grid.Count];
-            int particleIndex = 0;
-
-            foreach (var cell in heatgrid.grid)
-            {
-                if (particleIndex == particleSystem.main.maxParticles)
-                {
-                    Debug.LogWarning($"The {nameof(ParticleSystemVisualizer)} won't draw any further because the {nameof(particleSystem.main.maxParticles)} has been reached. Consider increasing the {nameof(particleSystem.main.maxParticles)} inside the {nameof(ParticleSystem)}.", this);
-                    break;
-                }
-
-                // Set Starting Values.
-                particles[particleIndex].position = heatgrid.GridToWorld(cell.Key);
-                particles[particleIndex].startSize = heatgrid.cellSize;
-                particles[particleIndex].startColor = Color.white;
-                particles[particleIndex].startLifetime = float.PositiveInfinity;
-
-                // Set Speed. We use this to apply the color dynamically.
-                particles[particleIndex].velocity = Vector3.forward * cell.Value;
-
-                particleIndex++;
-            }
-
             particleSystem.Play();
             particleSystem.SetParticles(particles);
             particleSystem.Pause();
@@ -108,15 +79,15 @@ namespace Cubusky.Heatgrids
         #region Serialization & Initialization
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
-            _heatgrid = heatgrid as Object;
             try
             {
+                // This needs to happen in the serialization step, otherwise the particles will start moving the moment the editor reloads.
                 UpdateParticleSystem();
             }
             catch (NullReferenceException) { }
         }
 
-        void ISerializationCallbackReceiver.OnAfterDeserialize() => heatgrid = _heatgrid as IHeatgrid;
+        void ISerializationCallbackReceiver.OnAfterDeserialize() { }
 
         private void UpdateParticleSystem()
         {
@@ -135,11 +106,117 @@ namespace Cubusky.Heatgrids
         }
         #endregion
 
+        #region Particle Population
+        private ParticleSystem.Particle[] particles = null;
+        private bool isPopulatingParticles;
+        private event Action<ParticleSystem.Particle[]> particlesPopulated;
+
+        private static void SetParticle(ref ParticleSystem.Particle particle, Vector3Int coordinates, int steps, float cellSize)
+        {
+            // Set Starting Values.
+            particle.position = IHeatgrid.GridToWorld(coordinates, cellSize);
+            particle.startSize = cellSize;
+            particle.startColor = Color.white;
+            particle.startLifetime = float.PositiveInfinity;
+
+            // Set Speed. We use this to apply the color dynamically.
+            particle.velocity = Vector3.forward * steps;
+        }
+
+        private async void PopulateParticlesAsync()
+        {
+            if (isPopulatingParticles)
+            {
+                return;
+            }
+
+            isPopulatingParticles = true;
+
+            try
+            {
+                var gridsByCellSizes = new SortedList<float, Dictionary<Vector3Int, int>>();
+
+                await foreach (var json in loader.LoadAsyncEnumerable<IEnumerable<string>>(destroyCancellationToken).ConfigureAwait(false))
+                {
+                    // Update gridsByCellSizes
+                    await Task.Run(() =>
+                    {
+                        var grid = JsonHeatgrid.FromJson(json, out var cellSize);
+                        if (filter?.Include(new Heatgrid() { grid = grid, cellSize = cellSize }) == false)
+                        {
+                            return;
+                        }
+
+                        var smallerGrids = gridsByCellSizes.TakeWhile(gridByCellSize => gridByCellSize.Key < cellSize).Select(gridByCellSize => gridByCellSize.Value);
+                        void AddCellToSmallerGrids(KeyValuePair<Vector3Int, int> cell)
+                        {
+                            foreach (var smallerGrid in smallerGrids)
+                            {
+                                if (smallerGrid.ContainsKey(cell.Key))
+                                {
+                                    smallerGrid[cell.Key] += cell.Value;
+                                }
+                            }
+                        }
+
+                        if (!gridsByCellSizes.ContainsKey(cellSize))
+                        {
+                            foreach (var cell in grid)
+                            {
+                                AddCellToSmallerGrids(cell);
+                            }
+
+                            gridsByCellSizes.Add(cellSize, grid);
+                        }
+                        else
+                        {
+                            foreach (var cell in grid)
+                            {
+                                AddCellToSmallerGrids(cell);
+
+                                if (!gridsByCellSizes[cellSize].TryAdd(cell.Key, cell.Value))
+                                {
+                                    gridsByCellSizes[cellSize][cell.Key] += cell.Value;
+                                }
+                            }
+                        }
+                    }, destroyCancellationToken);
+
+                    // Populate particles
+                    await Task.Run(() =>
+                    {
+                        particles = new ParticleSystem.Particle[0];
+                        int particleIndex = 0;
+
+                        foreach (var gridByCellsize in gridsByCellSizes)
+                        {
+                            Array.Resize(ref particles, particles.Length + gridByCellsize.Value.Count);
+
+                            foreach (var cell in gridByCellsize.Value)
+                            {
+                                SetParticle(ref particles[particleIndex], cell.Key, cell.Value, gridByCellsize.Key);
+                                particleIndex++;
+                            }
+                        }
+                    }, destroyCancellationToken);
+
+                    particlesPopulated?.Invoke(particles);
+                }
+            }
+            finally
+            {
+                isPopulatingParticles = false;
+                particlesPopulated = null;
+            }
+        }
+        #endregion
+
         #region Context Methods
         [ContextMenu(nameof(SetAverageSteps))]
         private void SetAverageSteps()
         {
-            var average = heatgrid.grid.Values.Average();
+            //var average = gridsByCellsizes.Values.SelectMany(grid => grid.Values).Average();
+            var average = particles.Average(particle => particle.velocity.magnitude);
             stepGradient.minSteps = (int)Math.Ceiling(average * 0.2);
             stepGradient.maxSteps = (int)Math.Ceiling(average * 1.8);
         }
@@ -148,15 +225,48 @@ namespace Cubusky.Heatgrids
         private void SetMaxParticles()
         {
             var main = particleSystem.main;
-            main.maxParticles = Mathf.Max(main.maxParticles, heatgrid.grid.Count);
-            Debug.LogWarning($"Max Particles have been set. Note that a large amount of particles may impact editor performance.");
+            if ((main.maxParticles = particles.Length) > maxParticleGrowth)
+            {
+                Debug.LogWarning($"Max Particles have been set to {particles.Length}. Note that a large amount of particles may impact editor performance.");
+            }
         }
 
         [ContextMenu(nameof(Visualize))]
-        private void Visualize() => visualizer.Visualize(heatgrid);
+        public void Visualize()
+        {
+            if (particles != null)
+            {
+                Visualize(particles);
+            }
+            else
+            {
+                particlesPopulated += GrowThenVisualize;
+                PopulateParticlesAsync();
+
+                void GrowThenVisualize(ParticleSystem.Particle[] particles)
+                {
+                    var main = particleSystem.main;
+                    if (particles.Length >= maxParticleGrowth)
+                    {
+                        main.maxParticles = maxParticleGrowth;
+                        particlesPopulated -= GrowThenVisualize;
+                    }
+                    else
+                    {
+                        main.maxParticles = particles.Length;
+                    }
+
+                    Visualize(particles);
+                }
+            }
+        }
 
         [ContextMenu(nameof(Stop))]
-        private void Stop() => particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        private void Stop()
+        {
+            particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            particles = null;
+        }
         #endregion
     }
 }
