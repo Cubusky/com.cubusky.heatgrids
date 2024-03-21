@@ -136,7 +136,7 @@ namespace Cubusky.Heatgrids
             {
                 var gridsByCellSizes = new SortedList<float, Dictionary<Vector3Int, int>>();
 
-                await foreach (var json in loader.LoadAsyncEnumerable<IEnumerable<string>>(destroyCancellationToken).ConfigureAwait(false))
+                await foreach (var json in loader.LoadAsyncEnumerable<string>(destroyCancellationToken).ConfigureAwait(false))
                 {
                     // Update gridsByCellSizes
                     await Task.Run(() =>
