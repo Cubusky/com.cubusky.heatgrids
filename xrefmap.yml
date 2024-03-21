@@ -84,6 +84,19 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.HeatgridRecorder.recordingTime
   nameWithType: HeatgridRecorder.recordingTime
+- uid: Cubusky.Heatgrids.HeatgridRecorder.saveInEditor
+  name: saveInEditor
+  href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_saveInEditor
+  commentId: P:Cubusky.Heatgrids.HeatgridRecorder.saveInEditor
+  fullName: Cubusky.Heatgrids.HeatgridRecorder.saveInEditor
+  nameWithType: HeatgridRecorder.saveInEditor
+- uid: Cubusky.Heatgrids.HeatgridRecorder.saveInEditor*
+  name: saveInEditor
+  href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_saveInEditor_
+  commentId: Overload:Cubusky.Heatgrids.HeatgridRecorder.saveInEditor
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.HeatgridRecorder.saveInEditor
+  nameWithType: HeatgridRecorder.saveInEditor
 - uid: Cubusky.Heatgrids.HeatgridRecorder.saver
   name: saver
   href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_saver

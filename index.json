@@ -7,7 +7,7 @@
   "api/Cubusky.Heatgrids.HeatgridRecorder.html": {
     "href": "api/Cubusky.Heatgrids.HeatgridRecorder.html",
     "title": "Class HeatgridRecorder | Heatgrids | 0.4.0-exp",
-    "keywords": "Class HeatgridRecorder Namespace Cubusky.Heatgrids public class HeatgridRecorder : MonoBehaviour, IHeatgrid, ISerializationCallbackReceiver Inheritance object HeatgridRecorder Implements IHeatgrid ISerializationCallbackReceiver Properties heatgrid public IHeatgrid heatgrid { get; set; } Property Value IHeatgrid minimumRecordingTime public TimeSpan minimumRecordingTime { get; set; } Property Value TimeSpan recordingTime public float recordingTime { get; } Property Value float saver public ISaver saver { get; set; } Property Value ISaver"
+    "keywords": "Class HeatgridRecorder Namespace Cubusky.Heatgrids public class HeatgridRecorder : MonoBehaviour, IHeatgrid, ISerializationCallbackReceiver Inheritance object HeatgridRecorder Implements IHeatgrid ISerializationCallbackReceiver Properties heatgrid public IHeatgrid heatgrid { get; set; } Property Value IHeatgrid minimumRecordingTime public TimeSpan minimumRecordingTime { get; set; } Property Value TimeSpan recordingTime public float recordingTime { get; } Property Value float saveInEditor public bool saveInEditor { get; set; } Property Value bool saver public ISaver saver { get; set; } Property Value ISaver"
   },
   "api/Cubusky.Heatgrids.IFilter.html": {
     "href": "api/Cubusky.Heatgrids.IFilter.html",
