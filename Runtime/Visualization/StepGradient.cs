@@ -31,8 +31,6 @@ namespace Cubusky.Heatgrids
                 new(Color.green, 0.5f),
                 new(Color.red, 1f),
             },
-            colorSpace = ColorSpace.Linear,
-            mode = GradientMode.PerceptualBlend
         };
 
         void ISerializationCallbackReceiver.OnBeforeSerialize()

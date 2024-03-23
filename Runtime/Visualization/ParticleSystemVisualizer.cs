@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Cubusky.Heatgrids
 {
     [RequireComponent(typeof(ParticleSystem))]
+    [ExecuteAlways]
     public class ParticleSystemVisualizer : MonoBehaviour, ISerializationCallbackReceiver, IVisualizer
     {
         [field: SerializeField, HideInInspector] public new ParticleSystem particleSystem { get; private set; }
@@ -17,7 +19,7 @@ namespace Cubusky.Heatgrids
         [field: SerializeField] public int maxParticleGrowth { get; set; } = 100_000;
 
         [field: Header("Visualization")]
-        [field: SerializeField] public StepGradient stepGradient { get; set; }
+        [field: SerializeField] public StepGradient stepGradient { get; set; } = new();
         [field: SerializeField] public float sizeMultiplier { get; set; } = 2.5f;
 
         private void InitializeComponents()
@@ -47,6 +49,8 @@ namespace Cubusky.Heatgrids
             particleSystemRenderer.sortMode = ParticleSystemSortMode.Distance;
             particleSystemRenderer.allowRoll = false;
             particleSystemRenderer.alignment = ParticleSystemRenderSpace.Facing;
+
+            stepGradient.gradient.mode = GradientMode.Blend;
         }
 
         private void Reset()
@@ -64,9 +68,18 @@ namespace Cubusky.Heatgrids
 #endif
         }
 
+        private CancellationTokenSource destroyCancellationTokenSource;
+        private CancellationToken destroyCancellationToken;
+
         private void Awake()
         {
             InitializeComponents();
+        }
+
+        private void OnDestroy()
+        {
+            destroyCancellationTokenSource.Cancel();
+            destroyCancellationTokenSource.Dispose();
         }
 
         private void Visualize(ParticleSystem.Particle[] particles)
@@ -87,7 +100,15 @@ namespace Cubusky.Heatgrids
             catch (NullReferenceException) { }
         }
 
-        void ISerializationCallbackReceiver.OnAfterDeserialize() { }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
+        {
+            if (destroyCancellationTokenSource == null)
+            {
+                destroyCancellationTokenSource = new();
+                destroyCancellationToken = destroyCancellationTokenSource.Token;
+            }
+        }
 
         private void UpdateParticleSystem()
         {
@@ -201,8 +222,11 @@ namespace Cubusky.Heatgrids
                     }, destroyCancellationToken);
 
                     particlesPopulated?.Invoke(particles);
+
+                    await Task.Delay(4000, destroyCancellationToken);
                 }
             }
+            catch (TaskCanceledException) { }
             finally
             {
                 isPopulatingParticles = false;
