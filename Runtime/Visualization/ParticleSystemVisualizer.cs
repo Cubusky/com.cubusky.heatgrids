@@ -8,6 +8,7 @@ using UnityEngine;
 namespace Cubusky.Heatgrids
 {
     [RequireComponent(typeof(ParticleSystem))]
+    [AddComponentMenu(nameof(Heatgrids) + " Particle System Visualizer")]
     [ExecuteAlways]
     public class ParticleSystemVisualizer : MonoBehaviour, ISerializationCallbackReceiver, IVisualizer
     {
@@ -222,8 +223,6 @@ namespace Cubusky.Heatgrids
                     }, destroyCancellationToken);
 
                     particlesPopulated?.Invoke(particles);
-
-                    await Task.Delay(4000, destroyCancellationToken);
                 }
             }
             catch (TaskCanceledException) { }
