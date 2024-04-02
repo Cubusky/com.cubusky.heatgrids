@@ -9,6 +9,7 @@ namespace Cubusky.Heatgrids
         [SerializeField, TimeSpan] private long _minimumRecordingTime = TimeSpan.TicksPerSecond * 10;
         [field: SerializeReference, ReferenceDropdown] public IHeatgrid heatgrid { get; set; }
         [field: SerializeField] public bool saveInEditor { get; set; }
+        [field: SerializeReference, ReferenceDropdown(nullable = true)] public ICompressor compressor { get; set; }
         [field: SerializeReference, ReferenceDropdown] public ISaver saver { get; set; }
 
         Dictionary<Vector3Int, int> IHeatgrid.grid => heatgrid.grid;
@@ -30,7 +31,7 @@ namespace Cubusky.Heatgrids
             recordingTime += Time.fixedDeltaTime;
         }
 
-        private void OnDestroy()
+        private async void OnDestroy()
         {
 #if UNITY_EDITOR
             if (saveInEditor)
@@ -39,7 +40,11 @@ namespace Cubusky.Heatgrids
                 if (recordingTime > minimumRecordingTime.TotalSeconds)
                 {
                     var json = JsonHeatgrid.ToJson(heatgrid);
-                    saver.SaveAsync(json);
+                    var bytes = saver.encoding.GetBytes(json);
+                    bytes = compressor != null
+                        ? await compressor.CompressAsync(bytes)
+                        : bytes;
+                    await saver.SaveAsync(bytes);
                 }
             }
         }
