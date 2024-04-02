@@ -45,6 +45,19 @@ references:
   commentId: T:Cubusky.Heatgrids.HeatgridRecorder
   fullName: Cubusky.Heatgrids.HeatgridRecorder
   nameWithType: HeatgridRecorder
+- uid: Cubusky.Heatgrids.HeatgridRecorder.compressor
+  name: compressor
+  href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_compressor
+  commentId: P:Cubusky.Heatgrids.HeatgridRecorder.compressor
+  fullName: Cubusky.Heatgrids.HeatgridRecorder.compressor
+  nameWithType: HeatgridRecorder.compressor
+- uid: Cubusky.Heatgrids.HeatgridRecorder.compressor*
+  name: compressor
+  href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_compressor_
+  commentId: Overload:Cubusky.Heatgrids.HeatgridRecorder.compressor
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.HeatgridRecorder.compressor
+  nameWithType: HeatgridRecorder.compressor
 - uid: Cubusky.Heatgrids.HeatgridRecorder.heatgrid
   name: heatgrid
   href: api/Cubusky.Heatgrids.HeatgridRecorder.html#Cubusky_Heatgrids_HeatgridRecorder_heatgrid
@@ -319,6 +332,19 @@ references:
   isSpec: "True"
   fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.Visualize
   nameWithType: ParticleSystemVisualizer.Visualize
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor
+  name: decompressor
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_decompressor
+  commentId: P:Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor
+  nameWithType: ParticleSystemVisualizer.decompressor
+- uid: Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor*
+  name: decompressor
+  href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_decompressor_
+  commentId: Overload:Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor
+  isSpec: "True"
+  fullName: Cubusky.Heatgrids.ParticleSystemVisualizer.decompressor
+  nameWithType: ParticleSystemVisualizer.decompressor
 - uid: Cubusky.Heatgrids.ParticleSystemVisualizer.filter
   name: filter
   href: api/Cubusky.Heatgrids.ParticleSystemVisualizer.html#Cubusky_Heatgrids_ParticleSystemVisualizer_filter
