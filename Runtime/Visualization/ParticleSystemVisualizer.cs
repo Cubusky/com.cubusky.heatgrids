@@ -12,6 +12,7 @@ namespace Cubusky.Heatgrids
         [field: SerializeField, HideInInspector] public new ParticleSystem particleSystem { get; private set; }
 
         [field: Header("Loading")]
+        [field: SerializeReference, ReferenceDropdown(nullable = true)] public ICompressor decompressor { get; set; }
         [field: SerializeReference, ReferenceDropdown] public IEnumerableLoader loader { get; set; }
         [field: SerializeReference, ReferenceDropdown(true)] public IFilter filter { get; set; }
         [field: SerializeField] public int maxParticleGrowth { get; set; } = 100_000;
@@ -136,8 +137,10 @@ namespace Cubusky.Heatgrids
             {
                 var gridsByCellSizes = new SortedList<float, Dictionary<Vector3Int, int>>();
 
-                await foreach (var json in loader.LoadAsyncEnumerable<string>(destroyCancellationToken).ConfigureAwait(false))
+                await foreach (var data in loader.LoadAsyncEnumerable<byte[]>(destroyCancellationToken).ConfigureAwait(false))
                 {
+                    var json = loader.encoding.GetString(await decompressor?.DecompressAsync(data, destroyCancellationToken) ?? data);
+
                     // Update gridsByCellSizes
                     await Task.Run(() =>
                     {
